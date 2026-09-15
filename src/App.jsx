@@ -117,7 +117,10 @@ function App() {
           name="description"
           content="Get a dedicated or flexi desk in ADGM from AED 1,000/month — 24/7 access, a registered business address, and meeting rooms at Addax Tower. Book a tour today."
         />
-        <link rel="canonical" href={`${SITE_URL}/`} />
+       <link
+  rel="canonical"
+  href="https://officespaceinadgm.aegiscoworking.ae/"
+/>
 
         <meta property="og:title" content="Office Space in ADGM | Aegis Coworking" />
         <meta
