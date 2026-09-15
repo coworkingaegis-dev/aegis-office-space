@@ -1,0 +1,396 @@
+/* Extra tokens this page needs, beyond what Header.css already defines */
+:root {
+  --color-bg: #f7f5f0;
+  --color-bg-soft: #f2f1ec;
+  --color-primary-soft: #e3ede8;
+  --radius-md: 16px;
+  --shadow-card: 0 2px 12px rgba(20, 20, 20, 0.05);
+  --shadow-lift: 0 14px 40px rgba(20, 20, 20, 0.12);
+}
+
+.office-page {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+}
+
+.office-page section {
+  padding: 90px 60px;
+}
+
+.office-page h1,
+.office-page h2,
+.office-page h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+}
+
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding-top: 160px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-bg) 0%, #f2efe7 100%);
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 16px;
+}
+
+.hero-desc {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary,
+.btn-outline {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  padding: 13px 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary-soft);
+}
+
+/* ===== PRICING ===== */
+.pricing {
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.pricing h2 {
+  font-size: 30px;
+  margin-bottom: 48px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 380px));
+  justify-content: center;
+  gap: 32px;
+}
+
+.price-card {
+  text-align: left;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 36px;
+}
+
+.price-card-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 6px;
+}
+
+.price-card h3 {
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 14px;
+}
+
+.price span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.price-desc {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 14.5px;
+  margin: 0 0 20px;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.price-card ul li::before {
+  content: '✓ ';
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.pricing-note {
+  max-width: 640px;
+  margin: 40px auto 0;
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* ===== AMENITIES ===== */
+.amenities {
+  text-align: center;
+  background: var(--color-bg-soft);
+}
+
+.amenities h2 {
+  font-size: 30px;
+  margin: 0 0 40px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: 24px 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.amenity-icon {
+  font-size: 26px;
+}
+
+.amenity-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ===== LOCATION ===== */
+.location {
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.location h2 {
+  font-size: 30px;
+  margin: 0 0 16px;
+}
+
+.location-desc {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.location-block {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.location-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.location-block h3 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.location-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  background: var(--color-bg-alt);
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 40px;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 18px 22px;
+  cursor: pointer;
+}
+
+.faq-item-open .faq-question {
+  color: var(--color-primary);
+}
+
+.faq-toggle {
+  font-size: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.faq-answer {
+  padding: 0 22px 20px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  text-align: center;
+  background: var(--color-primary-soft);
+}
+
+.final-cta h2 {
+  font-size: 30px;
+  margin: 0 0 12px;
+}
+
+.final-cta p {
+  color: var(--color-text-muted);
+  margin: 0 0 28px;
+}
+
+/* ===== FOOTER ===== */
+.office-footer {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--color-text);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13.5px;
+}
+
+.office-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-address {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-copy {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .office-page section {
+    padding: 60px 24px;
+  }
+
+  .hero {
+    padding-top: 130px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
