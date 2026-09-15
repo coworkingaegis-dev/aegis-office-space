@@ -48,6 +48,12 @@ const faqs = [
     q: 'Can I use this workspace in ADGM to register my business?',
     a: 'Yes. A Dedicated Desk in ADGM includes a registered business address that qualifies for your ADGM commercial licence application and meets the physical presence requirement, so you can operate fully compliant from day one.',
   },
+
+   {
+    q: 'How much does office space in ADGM cost?',
+    a: 'Office space at Aegis Coworking in ADGM starts from AED 1,000 per month for a Flexi Desk. A Dedicated Desk starts from AED 1,150 per month. Both options are available at Addax Tower on Al Reem Island, Abu Dhabi.',
+  },
+  
   {
     q: 'Does Aegis Coworking offer more than desks — private offices too?',
     a: (
