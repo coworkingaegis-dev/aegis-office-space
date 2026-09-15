@@ -19,12 +19,22 @@ const template = fs
 const { render } = await import(path.join(distDir, 'server/entry-server.js'))
 const { html, helmet } = render()
 
-const headTags = [
-  helmet.title.toString(),
-  helmet.meta.toString(),
-  helmet.link.toString(),
-  helmet.script.toString(),
-].join('\n')
+if (!helmet) {
+  console.warn(
+    'Warning: helmet context was empty during prerender — shipping the page without ' +
+    'server-rendered <head> tags. The client-side <Helmet> will still set them after ' +
+    'hydration, but crawlers that don\'t run JS won\'t see them until this is fixed.'
+  )
+}
+
+const headTags = helmet
+  ? [
+      helmet.title.toString(),
+      helmet.meta.toString(),
+      helmet.link.toString(),
+      helmet.script.toString(),
+    ].join('\n')
+  : ''
 
 const page = template
   .replace('</head>', `${headTags}\n</head>`)
