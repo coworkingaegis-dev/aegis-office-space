@@ -300,9 +300,20 @@ function App() {
         </script>
       </Helmet>
 
-      <a className="whatsapp-float" href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Chat with Aegis Coworking on WhatsApp">
-        <span>WA</span>
-      </a>
+     <a
+  className="whatsapp-float"
+  href={WHATSAPP}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with Aegis Coworking on WhatsApp"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.54 0 .22 5.32.22 11.86c0 2.09.55 4.13 1.59 5.92L.12 24l6.37-1.67a11.84 11.84 0 0 0 5.58 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.14-3.42-8.41ZM12.08 21.6h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.84 9.84 0 0 1-1.51-5.09c0-5.44 4.43-9.87 9.88-9.87a9.82 9.82 0 0 1 6.99 2.9 9.84 9.84 0 0 1 2.89 7c0 5.44-4.43 9.87-9.87 9.87Zm5.41-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.76-1.68-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.08 4.5.71.31 1.27.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"
+    />
+  </svg>
+</a>
 
       <header className="site-header">
         <nav className="navbar" aria-label="Primary navigation">
@@ -641,53 +652,142 @@ function App() {
 
       
 
-      <footer className="site-footer">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <a className="brand footer-brand-link" href={MAIN_SITE}>
-              <img src={aegisLogo} alt="Aegis Coworking" width="52" height="52" />
-              <span><strong>AEGIS</strong><small>COWORKING</small></span>
-            </a>
-            <p>Business centre in ADGM · Addax Tower, Al Reem Island, Abu Dhabi.</p>
-            <div className="social-links">
-              <a href="https://www.linkedin.com/company/aegis-coworking/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://www.instagram.com/aegis.coworking/" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://www.facebook.com/aegis.coworking" target="_blank" rel="noopener noreferrer">Facebook</a>
-            </div>
-          </div>
+<footer className="site-footer">
+  <div className="footer-grid">
 
-          <div>
-            <h3>WORKSPACE</h3>
-            <a href="https://www.aegiscoworking.ae/">Coworking Space ADGM</a>
-            <a href="https://www.aegiscoworking.ae/office-space">Hot Desk ADGM</a>
-            <a href="https://www.aegiscoworking.ae/office-space">Dedicated Desk ADGM</a>
-            <a href={`${MAIN_SITE}/private-office`}>Private Office ADGM</a>
-            <a href={`${MAIN_SITE}/virtual-office`}>Virtual Office ADGM</a>
-            <a href={`${MAIN_SITE}/meeting-room`}>Meeting Room ADGM</a>
-            <a href={`${MAIN_SITE}/day-pass`}>Day Pass ADGM</a>
-          </div>
+    {/* BRAND */}
+    <div className="footer-brand">
+      <a className="brand footer-brand-link" href={MAIN_SITE}>
+        <img
+          src={aegisLogo}
+          alt="Aegis Coworking"
+          width="52"
+          height="52"
+        />
 
-          
+        <span>
+          <strong>AEGIS</strong>
+          <small>COWORKING</small>
+        </span>
+      </a>
 
-          
-          <div>
-            <h3>CONTACT</h3>
-            <a href="tel:+971503926316">+971 50 392 6316</a>
-            <a href="mailto:contact@aegiscoworking.ae">contact@aegiscoworking.ae</a>
-            <span>Office 3812, Addax Tower,<br />Al Reem Island, Abu Dhabi</span>
-            
-          </div>
-        </div>
+      <p className="footer-description">
+        Business centre in ADGM · Addax Tower, Al Reem Island, Abu Dhabi.
+      </p>
 
-        <div className="footer-bottom">
-          <span>© 2026 Aegis Coworking. All rights reserved.</span>
-          <span>
-            <a href={`${MAIN_SITE}/terms`}>Terms &amp; Conditions</a>
-            {' · '}
-            <a href={`${MAIN_SITE}/privacy`}>Privacy Policy</a>
-          </span>
-        </div>
-      </footer>
+      <div className="social-links">
+
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/company/aegis-coworking/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Aegis Coworking on LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.03 2.03 0 1 0 5.25 7.06 2.03 2.03 0 0 0 5.25 3ZM20.44 13.42c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.36V20h3.38v-6.4c0-1.69.32-3.33 2.42-3.33 2.07 0 2.1 1.94 2.1 3.44V20h3.18v-6.58Z" />
+          </svg>
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://www.instagram.com/aegis.coworking/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Aegis Coworking on Instagram"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" className="instagram-dot" />
+          </svg>
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://www.facebook.com/aegis.coworking"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Aegis Coworking on Facebook"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-8h2.75l.42-3h-3.17V8.08c0-.87.24-1.46 1.5-1.46h1.8V3.94c-.31-.04-1.38-.14-2.63-.14-2.6 0-4.38 1.59-4.38 4.51V10H7v3h2.79v8h3.71Z" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+
+    {/* WORKSPACE */}
+    <div className="footer-column">
+      <h3>WORKSPACE</h3>
+
+      <a href={`${MAIN_SITE}/office-space`}>
+        Hot Desk ADGM
+      </a>
+
+      <a href={`${MAIN_SITE}/office-space`}>
+        Dedicated Desk ADGM
+      </a>
+
+      <a href={`${MAIN_SITE}/private-office`}>
+        Private Office ADGM
+      </a>
+
+      <a href={`${MAIN_SITE}/virtual-office`}>
+        Virtual Office ADGM
+      </a>
+
+      <a href={`${MAIN_SITE}/meeting-room`}>
+        Meeting Room ADGM
+      </a>
+
+      <a href={`${MAIN_SITE}/day-pass`}>
+        Day Pass ADGM
+      </a>
+    </div>
+
+
+    {/* CONTACT */}
+    <div className="footer-column footer-contact">
+      <h3>CONTACT</h3>
+
+      <a href="tel:+971503926316">
+        +971 50 392 6316
+      </a>
+
+      <a href="mailto:contact@aegiscoworking.ae">
+        contact@aegiscoworking.ae
+      </a>
+
+      <p>
+        Office 3812, Addax Tower,<br />
+        Al Reem Island, Abu Dhabi
+      </p>
+    </div>
+
+  </div>
+
+
+  <div className="footer-bottom">
+    <span>
+      © 2026 Aegis Coworking. All rights reserved.
+    </span>
+
+    <span className="footer-legal">
+      <a href={`${MAIN_SITE}/terms`}>
+        Terms &amp; Conditions
+      </a>
+
+      <span>·</span>
+
+      <a href={`${MAIN_SITE}/privacy`}>
+        Privacy Policy
+      </a>
+    </span>
+  </div>
+</footer>
     </>
   )
 }
