@@ -147,14 +147,14 @@ const blogGuides = [
 
 const faqs = [
   ['What is a coworking space in ADGM?', 'A coworking space in ADGM is a shared professional workspace where businesses and professionals can use desks, offices and meeting facilities instead of taking a conventional office lease.'],
-  ['How much does coworking in ADGM cost?', 'At Aegis, current listed prices include AED 100/day for a Day Pass, AED 1,000/month for a Flexi Desk, AED 1,150/month for a Dedicated Desk, AED 4,500/month for a Private Office and AED 292/month for a Virtual Office.'],
-  ['What is a Hot Desk in ADGM?', 'A Hot Desk is a shared, unassigned workspace. At Aegis, the Hot Desk/Flexi Desk option is AED 1,000/month.'],
-  ['What is a Dedicated Desk in ADGM?', 'A Dedicated Desk is a fixed workstation assigned to you. Aegis currently lists it at AED 1,150/month, with a registered ADGM business address included with the plan.'],
+  ['How much does coworking in ADGM cost?', 'At Aegis, current listed prices include AED 100/day for a Day Pass, AED 1,000 per month for a Flexi Desk, AED 1,150 per month for a Dedicated Desk, AED 4,500 per month for a Private Office and AED 292 per month for a Virtual Office.'],
+  ['What is a Hot Desk in ADGM?', 'A Hot Desk is a shared, unassigned workspace. At Aegis, the Hot Desk/Flexi Desk option is AED 1,000 per month.'],
+  ['What is a Dedicated Desk in ADGM?', 'A Dedicated Desk is a fixed workstation assigned to you. Aegis currently lists it at AED 1,150 per month, with a registered ADGM business address included with the plan.'],
   ['What is the difference between a Hot Desk and a Dedicated Desk?', 'A Hot Desk/Flexi Desk is shared and flexible. A Dedicated Desk gives you a consistent workstation and includes the business-address feature described for that plan.'],
-  ['How much is a Private Office in ADGM?', 'Aegis currently lists Private Office space from AED 4,500/month. Private offices are intended for businesses and teams that need a private, lockable room.'],
-  ['How much is a Virtual Office in ADGM?', 'Aegis currently lists its Virtual Office option from AED 292/month.'],
+  ['How much is a Private Office in ADGM?', 'Aegis currently lists Private Office space from AED 4,500 per month. Private offices are intended for businesses and teams that need a private, lockable room.'],
+  ['How much is a Virtual Office in ADGM?', 'Aegis currently lists its Virtual Office option from AED 292 per month.'],
   ['Does Aegis offer meeting rooms?', 'Yes. Meeting rooms can be booked by the hour, with meeting-room credits available for members.'],
-  ['Does Aegis offer a Day Pass?', 'Yes. The current listed Day Pass price is AED 100/day.'],
+  ['Does Aegis offer a Day Pass?', 'Yes. The current listed Day Pass price is AED 100 per day.'],
   ['Where is Aegis Coworking located?', 'Aegis Coworking is at Office 3812, Addax Tower, Al Reem Island, Abu Dhabi, UAE.'],
   ['Is Aegis Coworking at Addax Tower?', 'Yes. Aegis Coworking is located in Addax Tower on Al Reem Island.'],
   ['How do I book a workspace?', 'Contact Aegis to discuss the workspace you need or arrange a tour.'],
@@ -327,11 +327,12 @@ function App() {
           </button>
 
           <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
-            <a href="#services" onClick={closeMenu}>Workspace</a>
-            <a href="#requirements" onClick={closeMenu}>ADGM Guide</a>
-            <a href="#pricing" onClick={closeMenu}>Pricing</a>
-            <a href="#location" onClick={closeMenu}>Location</a>
-            <a href="#faq" onClick={closeMenu}>FAQ</a>
+            <a href="https://www.aegiscoworking.ae/office-space" onClick={closeMenu}>Office Space</a>
+            <a href="https://www.aegiscoworking.ae/virtual-office" onClick={closeMenu}>Virtual Office</a>
+            <a href="https://www.aegiscoworking.ae/private-office" onClick={closeMenu}>Private Office</a>
+            <a href="https://www.aegiscoworking.ae/meeting-room" onClick={closeMenu}>Meeting Room</a>
+            <a href="https://www.aegiscoworking.ae/day-pass" onClick={closeMenu}>Day Pass</a>
+            <a href="https://www.aegiscoworking.ae/contact" onClick={closeMenu}>Contact Us</a>
             <a className="nav-cta" href={`${MAIN_SITE}/contact`} onClick={closeMenu}>Book a Tour</a>
           </div>
         </nav>
