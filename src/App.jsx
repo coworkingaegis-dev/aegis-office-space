@@ -101,7 +101,7 @@ const pricing = [
   ['Dedicated Desk', 'AED 1,150', 'per month'],
   ['Virtual Office', 'AED 292', 'per month'],
   ['Private Office', 'AED 4,500', 'per month'],
-  ['Meeting Room', 'Contact', ''],
+ 
 ]
 
 const audiences = [
