@@ -28,8 +28,8 @@ The Flexi Desk is suitable for anyone searching for a flexi desk in ADGM, flexi 
 
 Aegis Coworking is located in Addax Tower within the ADGM area, making it a convenient option for professionals and businesses looking for workspace in ADGM and Al Reem Island. You also get access to the wider coworking environment, meeting facilities and shared amenities while avoiding the cost and commitment associated with a traditional office.
 
-With no deposit, no admin fees and no setup fees, the Flexi Desk provides a straightforward and cost-effective coworking option for individuals and businesses looking for flexible office space in Abu Dhabi.
-.',
+With no deposit, no admin fees and no setup fees, the Flexi Desk provides a straightforward and cost-effective coworking option for individuals and businesses looking for flexible office space in Abu Dhabi.'
+,
     href: `${MAIN_SITE}/office-space`,
     bullets: ['Shared workspace', 'Flexible seating', 'Professional environment', '24/7 member access'],
   },
