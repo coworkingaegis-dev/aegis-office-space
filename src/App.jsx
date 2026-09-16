@@ -9,276 +9,168 @@ import meetingRoomImg from './assets/Meeting room adgm abu dhabi.webp'
 import dayPassImg from './assets/aegis-coworking-day-pass-adgm.webp'
 import './App.css'
 
-const SITE_URL = 'https://officespaceinadgm.aegiscoworking.ae'
-const MAIN_SITE = 'https://aegiscoworking.ae'
+const SITE_URL = 'https://www.coworkingadgm.online'
+const MAIN_SITE = 'https://www.aegiscoworking.ae'
+const WHATSAPP = 'https://wa.me/971503926316'
 
-/* ---------- Secondary services (link out to the main site) ---------- */
-const otherServices = [
+const services = [
+  {
+    id: 'hot-desk',
+    image: flexiDeskImg,
+    title: 'Hot Desk ADGM',
+    price: 'AED 1,000/month',
+    tag: 'Flexible seating',
+    text: 'A flexible shared workspace for professionals who want a ready-to-use desk without committing to a fixed workstation.',
+    href: `${MAIN_SITE}/office-space`,
+    bullets: ['Shared workspace', 'Flexible seating', 'Professional environment', '24/7 member access'],
+  },
+  {
+    id: 'dedicated-desk',
+    image: dedicatedDeskImg,
+    title: 'Dedicated Desk ADGM',
+    price: 'AED 1,150/month',
+    tag: 'Your fixed workspace',
+    text: 'A dedicated workstation for regular users who want a consistent place to work, with an ADGM business address included with the plan.',
+    href: `${MAIN_SITE}/office-space`,
+    bullets: ['Permanent workstation', 'Registered ADGM business address', '24/7 access', 'Lockable storage'],
+  },
   {
     id: 'private-office',
-    img: privateOfficeImg,
-    title: 'Private Office in ADGM',
-    blurb: 'A private, lockable room for your team, with your own ADGM business address included.',
-    price: 'From AED 4,500/month',
+    image: privateOfficeImg,
+    title: 'Private Office ADGM',
+    price: 'AED 4,500/month',
+    tag: 'Privacy for teams',
+    text: 'A private, lockable office for businesses that need a dedicated room and a professional workspace in Addax Tower.',
     href: `${MAIN_SITE}/private-office`,
+    bullets: ['Private lockable room', 'Business address included', 'Suitable for teams', 'Professional client environment'],
   },
   {
     id: 'virtual-office',
-    img: virtualOfficeImg,
-    title: 'Virtual Office in ADGM',
-    blurb: 'A registered ADGM business address and mail handling, with no physical desk required.',
-    price: 'From AED 292/month',
+    image: virtualOfficeImg,
+    title: 'Virtual Office ADGM',
+    price: 'AED 292/month',
+    tag: 'Professional presence',
+    text: 'A virtual-office option for businesses that need a professional presence without renting a physical desk.',
     href: `${MAIN_SITE}/virtual-office`,
+    bullets: ['Professional business presence', 'No physical desk required', 'Monthly option', 'Useful for remote businesses'],
   },
   {
     id: 'meeting-room',
-    img: meetingRoomImg,
-    title: 'Meeting Room in ADGM',
-    blurb: 'Hourly meeting rooms with WiFi and presentation screens, for members and non-members.',
-    price: 'Members get credits — contact for rates',
+    image: meetingRoomImg,
+    title: 'Meeting Room ADGM',
+    price: 'Contact for rates',
+    tag: 'Meet clients professionally',
+    text: 'Bookable meeting rooms for client meetings, interviews, discussions and business appointments.',
     href: `${MAIN_SITE}/meeting-room`,
+    bullets: ['Hourly booking', 'Presentation screens', 'WiFi', 'Members can use meeting credits'],
   },
   {
     id: 'presentation-room',
-    img: null,
-    title: 'Presentation Room in ADGM',
-    blurb: '4K projection, professional audio, and recording/live-streaming, seating up to 50 guests.',
-    price: 'Contact for hourly & half-day rates',
+    image: null,
+    title: 'Presentation Room ADGM',
+    price: 'Contact for rates',
+    tag: 'Present & collaborate',
+    text: 'A larger presentation space for events, workshops and business presentations, with professional AV support.',
     href: `${MAIN_SITE}/presentation-room`,
+    bullets: ['Up to 50 attendees', '4K display', 'Professional audio', 'Recording/live-streaming support'],
   },
   {
     id: 'day-pass',
-    img: dayPassImg,
-    title: 'Day Pass in ADGM',
-    blurb: 'One day of drop-in workspace access, no membership or commitment required.',
+    image: dayPassImg,
+    title: 'Day Pass ADGM',
     price: 'AED 100/day',
+    tag: 'Workspace for one day',
+    text: 'A simple option when you need a professional workspace for a single day without a monthly commitment.',
     href: `${MAIN_SITE}/day-pass`,
+    bullets: ['One-day access', 'No monthly membership required', 'Ready-to-use workspace', 'Ideal for visitors and occasional users'],
   },
 ]
 
-/* ---------- Requirements ---------- */
 const requirements = [
   {
-    q: 'Do You Need a Physical Office in ADGM?',
-    a: "It depends on your entity type and licence activity. Some ADGM categories require a physical presence, others accept a registered address such as a Dedicated Desk or Virtual Office. Check the current requirements for your specific activity with ADGM directly, or ask us and we'll point you in the right direction.",
+    title: 'Do you need a physical office in ADGM?',
+    text: 'It depends on your entity type, activity and applicable ADGM requirements. Confirm the current requirement for your specific business before choosing a workspace plan.',
   },
   {
-    q: 'Can You Use Coworking Space for an ADGM Business?',
-    a: 'Yes — many businesses register their ADGM entity using a Dedicated Desk or Private Office as their official business address, subject to their licence category.',
+    title: 'Can coworking space be used for an ADGM business?',
+    text: 'Workspace arrangements can differ by licence and business activity. Aegis can explain what each available plan provides, while your final eligibility should be confirmed against the current ADGM requirements.',
   },
   {
-    q: 'When Does a Dedicated Desk Make Sense?',
-    a: 'When you want a registered ADGM business address and a consistent desk you can return to every day, at a lower cost than a Private Office.',
+    title: 'When does a Dedicated Desk make sense?',
+    text: 'A Dedicated Desk suits someone who works regularly, wants a fixed workstation and needs the business-address features included with that plan.',
   },
   {
-    q: 'What Should You Check Before Choosing an ADGM Workspace?',
-    a: "Confirm your licence category's address requirements, whether a shared or virtual address is accepted, and how long a lease term you actually need before committing.",
-  },
-  {
-    q: 'Physical Office vs Flexible Workspace',
-    a: 'A flexible desk (Hot Desk, Flexi Desk, or Dedicated Desk) costs less and requires no long-term lease. A Private Office costs more but gives your team a private, lockable room of your own.',
+    title: 'What should you check before choosing?',
+    text: 'Check your licence category, address requirements, workspace type, access needs, team size, meeting requirements and total recurring costs before committing.',
   },
 ]
 
-/* ---------- Business centre ---------- */
-const businessCentre = [
-  {
-    h: 'What Is an ADGM Business Centre?',
-    p: 'A shared facility that provides workspace, a registered business address, and meeting facilities for ADGM-licensed businesses — all under one roof, without the overhead of a traditional lease.',
-  },
-  {
-    h: 'Business Centre vs Traditional Office',
-    p: 'A traditional office means a long lease and your own fit-out costs. A business centre in ADGM gives you a ready-to-use desk or room, shared amenities, and the flexibility to scale up or down.',
-  },
-  {
-    h: 'Workspace, Address & Meeting Facilities',
-    p: 'Aegis Coworking provides all three together at Addax Tower — a desk or office, a registered ADGM business address, and bookable meeting and presentation rooms.',
-  },
+const pricing = [
+  ['Day Pass', 'AED 100', '/day'],
+  ['Flexi Desk / Hot Desk', 'AED 1,000', '/month'],
+  ['Dedicated Desk', 'AED 1,150', '/month'],
+  ['Virtual Office', 'AED 292', '/month'],
+  ['Private Office', 'AED 4,500', '/month'],
+  ['Meeting Room', 'Contact', ''],
+  ['Presentation Room', 'Contact', ''],
 ]
 
-/* ---------- Pricing table ---------- */
-const pricingRows = [
-  { name: 'Day Pass', price: 'AED 100', period: '/day' },
-  { name: 'Flexi Desk (Hot Desk)', price: 'AED 1,000', period: '/month' },
-  { name: 'Dedicated Desk', price: 'AED 1,150', period: '/month' },
-  { name: 'Virtual Office', price: 'AED 292', period: '/month' },
-  { name: 'Private Office', price: 'AED 4,500', period: '/month' },
-  { name: 'Meeting Room', price: 'Contact for rates', period: '' },
-  { name: 'Presentation Room', price: 'Contact for rates', period: '' },
-]
-
-/* ---------- Decision section ---------- */
-const decisions = [
-  { q: 'Need a Desk for One Day?', a: 'Day Pass', href: `${MAIN_SITE}/day-pass` },
-  { q: 'Need Flexible Monthly Workspace?', a: 'Flexi Desk', href: '#services' },
-  { q: 'Need Your Own Fixed Workstation?', a: 'Dedicated Desk', href: '#services' },
-  { q: 'Need Privacy for Your Team?', a: 'Private Office', href: `${MAIN_SITE}/private-office` },
-  { q: 'Need a Professional Business Presence?', a: 'Virtual Office', href: `${MAIN_SITE}/virtual-office` },
-  { q: 'Need Somewhere to Meet Clients?', a: 'Meeting Room', href: `${MAIN_SITE}/meeting-room` },
-]
-
-/* ---------- Amenities (grouped) ---------- */
-const amenityGroups = [
-  { h: 'Work-Ready Coworking Spaces', items: ['Premium Chairs', 'Print & Scan'] },
-  { h: 'Meeting & Conference Facilities', items: ['Video Conference Rooms'] },
-  { h: 'Presentation Facilities', items: ['Presentation Room'] },
-  { h: 'Professional Business Environment', items: ['Premium Coffee', 'Sea Views'] },
-  { h: 'Flexible Access', items: ['24/7 Access', 'Beach Nearby', 'Fitness Access'] },
-]
-
-/* ---------- Audience ---------- */
 const audiences = [
-  { h: 'For Founders & Entrepreneurs', p: 'A professional ADGM business address and workspace from day one of registering.' },
-  { h: 'For Freelancers & Consultants', p: 'Flexible desk access without a long-term lease.' },
-  { h: 'For SMEs', p: 'Private office space for a growing team.' },
-  { h: 'For Remote Professionals', p: 'A Day Pass or Flexi Desk for when you need to get out of the house.' },
-  { h: 'For International Businesses', p: 'A registered ADGM address and meeting rooms without renting a full office.' },
-  { h: 'For Finance & Professional Services', p: 'A professional address and meeting rooms in a prestigious ADGM tower for client-facing work.' },
-  { h: 'For Small & Growing Teams', p: 'Desks that scale from one Dedicated Desk to a Private Office as you grow.' },
+  ['Founders & entrepreneurs', 'Flexible desks, dedicated workspaces and private offices for different stages of business.'],
+  ['Freelancers & consultants', 'Professional workspace when you need a place to focus, meet clients or work away from home.'],
+  ['SMEs & growing teams', 'Move from individual desks to private office space as your team requirements change.'],
+  ['Remote professionals', 'Use a Day Pass or flexible desk when you need a professional work environment.'],
+  ['International businesses', 'Explore workspace and business-presence options in an ADGM location.'],
+  ['Finance & professional services', 'Client-facing workspace and meeting facilities in Addax Tower.'],
 ]
 
-/* ---------- Problems -> Solutions ---------- */
 const problems = [
-  { q: "I don't need a full-time office.", a: 'Flexi Desk / Hot Desk', href: '#services' },
-  { q: 'I need a fixed desk.', a: 'Dedicated Desk', href: '#services' },
-  { q: 'I need more privacy.', a: 'Private Office', href: `${MAIN_SITE}/private-office` },
-  { q: 'I only need workspace for one day.', a: 'Day Pass', href: `${MAIN_SITE}/day-pass` },
-  { q: 'I need somewhere to meet clients.', a: 'Meeting Room', href: `${MAIN_SITE}/meeting-room` },
-  { q: 'I need a larger space for a presentation.', a: 'Presentation Room', href: `${MAIN_SITE}/presentation-room` },
-  { q: 'I need a professional business address.', a: 'Virtual Office', href: `${MAIN_SITE}/virtual-office` },
+  ['I only need workspace for one day.', 'Day Pass', `${MAIN_SITE}/day-pass`],
+  ['I want a flexible monthly desk.', 'Flexi Desk / Hot Desk', '#services'],
+  ['I need my own fixed workstation.', 'Dedicated Desk ADGM', '#services'],
+  ['I need privacy for my team.', 'Private Office ADGM', `${MAIN_SITE}/private-office`],
+  ['I need a professional business presence.', 'Virtual Office ADGM', `${MAIN_SITE}/virtual-office`],
+  ['I need somewhere to meet clients.', 'Meeting Room ADGM', `${MAIN_SITE}/meeting-room`],
+  ['I need a larger presentation space.', 'Presentation Room ADGM', `${MAIN_SITE}/presentation-room`],
 ]
 
-/* ---------- Blog / knowledge hub ---------- */
-const blogCategories = [
-  { h: 'ADGM Coworking & Workspace Guides', p: 'How coworking works in ADGM, and what to expect as a member.' },
-  { h: 'Dedicated Desk ADGM Guides', p: 'Deeper guides on using a Dedicated Desk as your registered business address.' },
-  { h: 'ADGM Cost & Comparison Guides', p: "Including “ADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?”" },
-  { h: 'Addax Tower & Location Guides', p: 'What it’s like working from Addax Tower, Al Reem Island.' },
+const blogGuides = [
+  {
+    title: 'Affordable Coworking on Al Reem Island',
+    text: 'A practical guide to finding flexible workspace around Al Reem Island and ADGM, including what to consider when comparing desk and office options.',
+  },
+  {
+    title: 'ADGM Coworking, Visa Quota & Employees Per Desk',
+    text: 'Aegis explains the relationship between workspace arrangements and employee capacity questions, helping businesses understand what they should verify before choosing a plan.',
+  },
+  {
+    title: 'Addax Tower ADGM Business Workspace Location',
+    text: 'A location-focused guide explaining why Addax Tower matters when looking for workspace in ADGM and Al Reem Island.',
+  },
+  {
+    title: 'ADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?',
+    text: 'A comparison guide for businesses considering the two financial-centre locations, with workspace cost as one part of the wider decision.',
+  },
+  {
+    title: 'Do You Need One Dedicated Desk Per Employee in ADGM?',
+    text: 'A guide focused on the difference between physical seating and business capacity, and the questions businesses should check for their specific setup.',
+  },
 ]
 
-/* ---------- FAQ ---------- */
 const faqs = [
-  {
-    q: 'What is a coworking space in ADGM?',
-    a: 'A coworking space in ADGM is a shared workspace inside Abu Dhabi Global Market where businesses can rent a desk or office, often including a registered business address, instead of leasing a traditional office.',
-  },
-  {
-    q: 'Flexi Desk vs Dedicated Desk in ADGM — what’s the difference?',
-    a: (
-      <>
-        A Flexi Desk in ADGM (also known as a Hot Desk) is a shared workspace, ideal if you don't
-        need the same spot every day. A Dedicated Desk gives you a permanent workspace plus a
-        registered ADGM business address. See the full{' '}
-        <a href="#pricing">pricing</a>.
-      </>
-    ),
-    schemaText:
-      "A Flexi Desk (also known as a Hot Desk) is a shared workspace in ADGM, ideal if you don't need the same spot every day. A Dedicated Desk gives you a permanent workspace plus a registered ADGM business address.",
-  },
-  {
-    q: "What's included in the one-time Due Diligence Fee?",
-    a: 'The AED 1,100 Due Diligence Fee covers the compliance and background checks ADGM requires before your licence and registered address can be activated. It is a one-time cost, separate from monthly rent.',
-  },
-  {
-    q: 'How much does coworking in ADGM cost?',
-    a: (
-      <>
-        Prices start at AED 100 for a Day Pass, AED 1,000/month for a Flexi Desk, and AED
-        1,150/month for a Dedicated Desk. See the full{' '}
-        <a href="#pricing">pricing table</a> for every option.
-      </>
-    ),
-    schemaText:
-      'Prices start at AED 100 for a Day Pass, AED 1,000/month for a Flexi Desk, and AED 1,150/month for a Dedicated Desk.',
-  },
-  {
-    q: 'Can I use this workspace in ADGM to register my business?',
-    a: 'Yes. A Dedicated Desk includes a registered business address that qualifies for your ADGM commercial licence application and meets the physical presence requirement, so you can operate fully compliant from day one.',
-  },
-  {
-    q: 'Does Aegis Coworking offer private offices too?',
-    a: (
-      <>
-        Yes — beyond the dedicated and flexi desk in ADGM, Aegis Coworking is a full business
-        center in ADGM offering{' '}
-        <a href={`${MAIN_SITE}/private-office`}>Private Office</a> for teams that need a
-        dedicated room, from AED 4,500 per month.
-      </>
-    ),
-    schemaText:
-      'Yes — beyond the dedicated and flexi desk in ADGM, Aegis Coworking is a full business center in ADGM offering private offices for teams that need a dedicated room, from AED 4,500/month.',
-  },
-  {
-    q: 'How much is a virtual office in ADGM?',
-    a: (
-      <>
-        Aegis Coworking's <a href={`${MAIN_SITE}/virtual-office`}>Virtual Office in ADGM</a>{' '}
-        starts from AED 292 per month if you don't need a physical desk, just a registered
-        business address.
-      </>
-    ),
-    schemaText:
-      "Aegis Coworking's virtual office in ADGM starts from AED 292/month if you don't need a physical desk, just a registered business address.",
-  },
-  {
-    q: 'Does Aegis offer meeting rooms?',
-    a: (
-      <>
-        Yes. <a href={`${MAIN_SITE}/meeting-room`}>Meeting rooms</a> can be booked by the hour by
-        members and non-members alike, with members receiving meeting room credits.
-      </>
-    ),
-    schemaText:
-      'Yes. Meeting rooms can be booked by the hour by members and non-members alike, with members receiving meeting room credits.',
-  },
-  {
-    q: 'Does Aegis offer a presentation room?',
-    a: (
-      <>
-        Yes. The{' '}
-        <a href={`${MAIN_SITE}/presentation-room`}>presentation room</a> seats up to 50 guests
-        theatre-style, with 4K projection, professional audio, and recording/live-streaming
-        support.
-      </>
-    ),
-    schemaText:
-      'Yes. The presentation room seats up to 50 guests theatre-style, with 4K projection, professional audio, and recording/live-streaming support.',
-  },
-  {
-    q: 'Is there a day pass if I only need the workspace occasionally?',
-    a: (
-      <>
-        Yes — a <a href={`${MAIN_SITE}/day-pass`}>Day Pass</a> is available from AED 100, with no
-        membership required.
-      </>
-    ),
-    schemaText: 'Yes — a Day Pass is available from AED 100, with no membership required.',
-  },
-  {
-    q: 'Does this workspace in ADGM include 24/7 access?',
-    a: 'Yes — desk members get secure building access around the clock, every day of the week, not just during standard business hours.',
-  },
-  {
-    q: 'Where is Aegis Coworking located?',
-    a: (
-      <>
-        Office 3812, Addax Tower, Al Reem Island, Abu Dhabi — within ADGM. See the{' '}
-        <a href="#find-us">map and directions</a> below.
-      </>
-    ),
-    schemaText: 'Office 3812, Addax Tower, Al Reem Island, Abu Dhabi — within ADGM.',
-  },
-  {
-    q: 'How do I book a workspace?',
-    a: (
-      <>
-        <a href={`${MAIN_SITE}/contact`}>Contact Aegis Coworking</a> to book a free tour, or reach
-        out on WhatsApp — we'll walk you through the options and get you set up.
-      </>
-    ),
-    schemaText:
-      'Contact Aegis Coworking to book a free tour, or reach out on WhatsApp — the team will walk you through the options and get you set up.',
-  },
+  ['What is a coworking space in ADGM?', 'A coworking space in ADGM is a shared professional workspace where businesses and professionals can use desks, offices and meeting facilities instead of taking a conventional office lease.'],
+  ['How much does coworking in ADGM cost?', 'At Aegis, current listed prices include AED 100/day for a Day Pass, AED 1,000/month for a Flexi Desk, AED 1,150/month for a Dedicated Desk, AED 4,500/month for a Private Office and AED 292/month for a Virtual Office.'],
+  ['What is a Hot Desk in ADGM?', 'A Hot Desk is a shared, unassigned workspace. At Aegis, the Hot Desk/Flexi Desk option is AED 1,000/month.'],
+  ['What is a Dedicated Desk in ADGM?', 'A Dedicated Desk is a fixed workstation assigned to you. Aegis currently lists it at AED 1,150/month, with a registered ADGM business address included with the plan.'],
+  ['What is the difference between a Hot Desk and a Dedicated Desk?', 'A Hot Desk/Flexi Desk is shared and flexible. A Dedicated Desk gives you a consistent workstation and includes the business-address feature described for that plan.'],
+  ['How much is a Private Office in ADGM?', 'Aegis currently lists Private Office space from AED 4,500/month. Private offices are intended for businesses and teams that need a private, lockable room.'],
+  ['How much is a Virtual Office in ADGM?', 'Aegis currently lists its Virtual Office option from AED 292/month.'],
+  ['Does Aegis offer meeting rooms?', 'Yes. Meeting rooms can be booked by the hour, with meeting-room credits available for members.'],
+  ['Does Aegis offer a presentation room?', 'Yes. The presentation room supports up to 50 attendees and includes a 4K display, professional audio and recording/live-streaming support.'],
+  ['Does Aegis offer a Day Pass?', 'Yes. The current listed Day Pass price is AED 100/day.'],
+  ['Where is Aegis Coworking located?', 'Aegis Coworking is at Office 3812, Addax Tower, Al Reem Island, Abu Dhabi, UAE.'],
+  ['Is Aegis Coworking at Addax Tower?', 'Yes. Aegis Coworking is located in Addax Tower on Al Reem Island.'],
+  ['How do I book a workspace?', 'Contact Aegis to discuss the workspace you need or arrange a tour.'],
 ]
 
 function App() {
@@ -286,739 +178,554 @@ function App() {
   const [openFaq, setOpenFaq] = useState(null)
 
   const closeMenu = () => setMenuOpen(false)
-  const toggleFaq = (index) => setOpenFaq((prev) => (prev === index ? null : index))
+  const toggleFaq = (index) => setOpenFaq((current) => (current === index ? null : index))
+
+  const faqSchema = faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  }))
+
+  const serviceOffers = pricing.slice(0, 5).map(([name, price, period]) => ({
+    '@type': 'Offer',
+    name,
+    price: price.replace(/[^0-9.]/g, ''),
+    priceCurrency: 'AED',
+    description: `${name} at Aegis Coworking, Addax Tower, Abu Dhabi.`,
+    url: `${SITE_URL}/#services`,
+  }))
 
   return (
     <>
       <Helmet>
-        <title>Coworking Space in ADGM, Abu Dhabi | Offices & Desks</title>
-        <meta name="robots" content="index, follow" />
+        <html lang="en" />
+        <title>Coworking Space in ADGM, Abu Dhabi | Desks & Offices</title>
         <meta
           name="description"
-          content="Explore coworking space in ADGM at Addax Tower, Abu Dhabi. Compare hot desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes."
+          content="Find coworking space in ADGM at Addax Tower, Abu Dhabi. Compare Hot Desk, Flexi Desk, Dedicated Desk, Private Office, Virtual Office, meeting rooms and Day Pass options."
         />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={`${SITE_URL}/`} />
 
-        <meta property="og:title" content="Coworking Space in ADGM, Abu Dhabi | Offices & Desks" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Coworking Space in ADGM, Abu Dhabi | Desks & Offices" />
         <meta
           property="og:description"
-          content="Compare hot desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes at Aegis Coworking, Addax Tower, ADGM."
+          content="Explore ADGM workspace at Addax Tower with flexible desks, dedicated desks, private offices, virtual-office options and meeting facilities."
         />
-        <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/`} />
-        <meta property="og:image" content="https://www.aegiscoworking.ae/og-image.jpg" />
+        <meta property="og:image" content={`${MAIN_SITE}/og-image.jpg`} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Coworking Space in ADGM, Abu Dhabi | Offices & Desks" />
+        <meta name="twitter:title" content="Coworking Space in ADGM, Abu Dhabi | Desks & Offices" />
         <meta
           name="twitter:description"
-          content="Compare hot desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes at Aegis Coworking, Addax Tower, ADGM."
+          content="Explore coworking space and office space in ADGM at Addax Tower, Al Reem Island."
         />
-        <meta name="twitter:image" content="https://www.aegiscoworking.ae/og-image.jpg" />
+        <meta name="twitter:image" content={`${MAIN_SITE}/og-image.jpg`} />
 
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            '@id': `${SITE_URL}/#website`,
-            name: 'Office Space in ADGM | Aegis Coworking',
-            url: `${SITE_URL}/`,
-            publisher: { '@id': 'https://www.aegiscoworking.ae/#organization' },
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            '@id': `${SITE_URL}/#webpage`,
-            url: `${SITE_URL}/`,
-            name: 'Coworking Space in ADGM, Abu Dhabi | Offices & Desks',
-            isPartOf: { '@id': `${SITE_URL}/#website` },
-            about: { '@id': `${SITE_URL}/#business` },
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            '@id': `${SITE_URL}/#business`,
-            name: 'Aegis Coworking – Office Space in ADGM',
-            url: `${SITE_URL}/`,
-            logo: 'https://www.aegiscoworking.ae/logo.png',
-            image: 'https://www.aegiscoworking.ae/og-image.jpg',
-            telephone: '+971503926316',
-            email: 'contact@aegiscoworking.ae',
-            description:
-              'Coworking space in ADGM, Addax Tower, Al Reem Island — hot desks, flexi desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes.',
-            priceRange: '$$',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'Office 3812, Addax Tower, Al Reem Island, Tamouh',
-              addressLocality: 'Abu Dhabi',
-              addressRegion: 'Abu Dhabi',
-              addressCountry: 'AE',
-            },
-            geo: { '@type': 'GeoCoordinates', latitude: 24.4989303, longitude: 54.4031693 },
-            hasMap: 'https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z',
-            openingHours: 'Mo-Su 00:00-23:59',
-            sameAs: [
-              'https://www.linkedin.com/company/aegis-coworking/',
-              'https://www.instagram.com/aegis.coworking/',
+            '@graph': [
+              {
+                '@type': 'WebSite',
+                '@id': `${SITE_URL}/#website`,
+                name: 'Coworking Space ADGM',
+                url: `${SITE_URL}/`,
+                publisher: { '@id': `${SITE_URL}/#organization` },
+              },
+              {
+                '@type': 'Organization',
+                '@id': `${SITE_URL}/#organization`,
+                name: 'Aegis Coworking',
+                url: MAIN_SITE,
+                logo: aegisLogo,
+                sameAs: [
+                  'https://www.linkedin.com/company/aegis-coworking/',
+                  'https://www.instagram.com/aegis.coworking/',
+                  'https://www.facebook.com/aegis.coworking',
+                ],
+              },
+              {
+                '@type': 'LocalBusiness',
+                '@id': `${SITE_URL}/#business`,
+                name: 'Aegis Coworking',
+                url: SITE_URL,
+                image: `${MAIN_SITE}/og-image.jpg`,
+                telephone: '+971503926316',
+                email: 'contact@aegiscoworking.ae',
+                description: 'Coworking space, desks, private offices, virtual-office options and meeting facilities in Addax Tower, Al Reem Island, Abu Dhabi.',
+                priceRange: 'AED 100–4500',
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Office 3812, Addax Tower, Al Reem Island',
+                  addressLocality: 'Abu Dhabi',
+                  addressRegion: 'Abu Dhabi',
+                  addressCountry: 'AE',
+                },
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 24.4989303,
+                  longitude: 54.4031693,
+                },
+                hasMap: 'https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z',
+                sameAs: [
+                  'https://www.linkedin.com/company/aegis-coworking/',
+                  'https://www.instagram.com/aegis.coworking/',
+                  'https://www.facebook.com/aegis.coworking',
+                ],
+              },
+              {
+                '@type': 'WebPage',
+                '@id': `${SITE_URL}/#webpage`,
+                url: SITE_URL,
+                name: 'Coworking Space in ADGM, Abu Dhabi',
+                isPartOf: { '@id': `${SITE_URL}/#website` },
+                about: { '@id': `${SITE_URL}/#business` },
+                mainEntity: { '@id': `${SITE_URL}/#business` },
+              },
+              {
+                '@type': 'Service',
+                name: 'Coworking Space in ADGM',
+                serviceType: 'Flexible workspace',
+                provider: { '@id': `${SITE_URL}/#business` },
+                areaServed: { '@type': 'City', name: 'Abu Dhabi' },
+                offers: serviceOffers,
+              },
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'Home',
+                    item: SITE_URL,
+                  },
+                ],
+              },
+              {
+                '@type': 'FAQPage',
+                mainEntity: faqSchema,
+              },
             ],
-            isPartOf: { '@id': 'https://www.aegiscoworking.ae/#organization' },
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.aegiscoworking.ae/' },
-              { '@type': 'ListItem', position: 2, name: 'Coworking Space in ADGM', item: `${SITE_URL}/` },
-            ],
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            serviceType: 'Coworking Space in ADGM',
-            name: 'Coworking Space in ADGM, Abu Dhabi',
-            description:
-              'Hot desks, flexi desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes at Addax Tower, ADGM.',
-            provider: { '@id': `${SITE_URL}/#business` },
-            areaServed: 'Abu Dhabi',
-            offers: [
-              { '@type': 'Offer', name: 'Day Pass', price: '100', priceCurrency: 'AED', availability: 'https://schema.org/InStock' },
-              { '@type': 'Offer', name: 'Flexi Desk', price: '1000', priceCurrency: 'AED', availability: 'https://schema.org/InStock' },
-              { '@type': 'Offer', name: 'Dedicated Desk', price: '1150', priceCurrency: 'AED', availability: 'https://schema.org/InStock' },
-              { '@type': 'Offer', name: 'Virtual Office', price: '292', priceCurrency: 'AED', availability: 'https://schema.org/InStock' },
-              { '@type': 'Offer', name: 'Private Office', price: '4500', priceCurrency: 'AED', availability: 'https://schema.org/InStock' },
-            ],
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((f) => ({
-              '@type': 'Question',
-              name: f.q,
-              acceptedAnswer: { '@type': 'Answer', text: f.schemaText || f.a },
-            })),
           })}
         </script>
       </Helmet>
 
-      <a
-        href="https://wa.me/971503926316"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-float"
-        aria-label="Chat with Aegis Coworking on WhatsApp"
-      >
-        <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
-          <path d="M16.004 3C9.376 3 4 8.373 4 15c0 2.34.646 4.53 1.77 6.4L4 29l7.79-1.73A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.7c-1.97 0-3.85-.52-5.48-1.5l-.39-.23-4.63 1.03 1-4.5-.25-.4A9.63 9.63 0 0 1 5.3 15c0-5.9 4.8-10.7 10.7-10.7S26.7 9.1 26.7 15 21.9 24.7 16.004 24.7Zm5.86-8.01c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.73-1.77-1-2.42-.26-.63-.53-.55-.73-.56h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67 0 1.57 1.15 3.09 1.31 3.3.16.21 2.26 3.46 5.48 4.85.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z" />
-        </svg>
+      <a className="whatsapp-float" href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Chat with Aegis Coworking on WhatsApp">
+        <span>WA</span>
       </a>
 
-      <nav className="navbar">
-        <a href="/" className="logo-link" onClick={closeMenu}>
-          <div className="logo">
-            <img
-              src={aegisLogo}
-              alt="Aegis Coworking"
-              className="logo-img"
-              width="1254"
-              height="1254"
-              decoding="async"
-            />
-            AEGIS <span className="logo-accent">COWORKING</span>
-          </div>
-        </a>
+      <header className="site-header">
+        <nav className="navbar" aria-label="Primary navigation">
+          <a href="/" className="brand" onClick={closeMenu}>
+            <img src={aegisLogo} alt="Aegis Coworking" width="56" height="56" />
+            <span>
+              <strong>AEGIS</strong>
+              <small>COWORKING</small>
+            </span>
+          </a>
 
-        <ul className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>
-          <li className="nav-dropdown">
-            <span>Services</span>
-            <ul className="dropdown-menu">
-              <li><a href="#services" onClick={closeMenu}>Hot Desk / Flexi Desk</a></li>
-              <li><a href="#services" onClick={closeMenu}>Dedicated Desk</a></li>
-              <li><a href={`${MAIN_SITE}/private-office`}>Private Office</a></li>
-              <li><a href={`${MAIN_SITE}/virtual-office`}>Virtual Office</a></li>
-              <li><a href={`${MAIN_SITE}/meeting-room`}>Meeting Room</a></li>
-              <li><a href={`${MAIN_SITE}/presentation-room`}>Presentation Room</a></li>
-              <li><a href={`${MAIN_SITE}/day-pass`}>Day Pass</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#about" onClick={closeMenu}>About</a>
-          </li>
-          <li>
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-expanded={menuOpen}
+            aria-label="Toggle navigation"
+            onClick={() => setMenuOpen((value) => !value)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <div className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
+            <a href="#services" onClick={closeMenu}>Workspace</a>
+            <a href="#requirements" onClick={closeMenu}>ADGM Guide</a>
+            <a href="#pricing" onClick={closeMenu}>Pricing</a>
+            <a href="#location" onClick={closeMenu}>Location</a>
             <a href="#faq" onClick={closeMenu}>FAQ</a>
-          </li>
-          <li>
-            <a href="#find-us" onClick={closeMenu}>Find Us</a>
-          </li>
-          <li>
-            <a href={`${MAIN_SITE}/contact`} onClick={closeMenu}>Contact Us</a>
-          </li>
-          <li className="nav-mobile-cta">
-            <a href="https://aegiscoworking.ae" onClick={closeMenu}>
-              <button className="btn-primary">VISIT AEGIS COWORKING</button>
-            </a>
-          </li>
-        </ul>
+            <a className="nav-cta" href={`${MAIN_SITE}/contact`} onClick={closeMenu}>Book a Tour</a>
+          </div>
+        </nav>
+      </header>
 
-        <a href="https://aegiscoworking.ae" className="nav-desktop-cta">
-          <button className="btn-primary">VISIT AEGIS COWORKING</button>
-        </a>
+      <main>
+        <section className="hero">
+          <div className="hero-content">
+            <p className="eyebrow">ADGM · ADDAX TOWER · AL REEM ISLAND</p>
+            <h1>Your ADGM Workspace Starts Here</h1>
+            <p className="hero-lead">
+              Find a coworking space in ADGM, Abu Dhabi that fits the way you work —
+              from a Hot Desk or Flexi Desk to a Dedicated Desk, Private Office,
+              Virtual Office, meeting room or Day Pass.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#services">Explore ADGM Workspace</a>
+              <a className="button button-light" href={`${MAIN_SITE}/contact`}>Book a Tour</a>
+            </div>
 
-        <button
-          className={`nav-toggle ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
+            <div className="hero-proof" aria-label="Workspace starting prices">
+              <div><strong>AED 100</strong><span>Day Pass</span></div>
+              <div><strong>AED 1,000</strong><span>Flexi Desk</span></div>
+              <div><strong>AED 1,150</strong><span>Dedicated Desk</span></div>
+              <div><strong>AED 4,500</strong><span>Private Office</span></div>
+            </div>
+          </div>
+        </section>
 
-      {/* ===== HERO ===== */}
-      <section className="hero">
-        <span className="eyebrow">ADGM · ADDAX TOWER · AL REEM ISLAND</span>
-        <h1>Your ADGM Workspace Starts Here</h1>
-        <p className="hero-desc">
-          Looking for a coworking space in ADGM, Abu Dhabi? Explore flexible workspace at Aegis
-          Coworking in Addax Tower, Al Reem Island, including hot desks, flexi desks, dedicated
-          desks, private offices, virtual offices, meeting rooms, presentation spaces and day
-          passes.
-        </p>
-        <div className="hero-ctas">
-          <a href="#services" className="btn-primary">Explore ADGM Workspace</a>
-          <a href={`${MAIN_SITE}/contact`} className="btn-outline">Book a Tour</a>
-        </div>
-      </section>
+        <section className="answer-section section-narrow">
+          <p className="eyebrow">QUICK ANSWER</p>
+          <h2>Looking for Coworking Space in ADGM? Start Here.</h2>
+          <p>
+            Aegis Coworking provides flexible workspace at Addax Tower, Al Reem Island,
+            Abu Dhabi. Options include Hot Desk/Flexi Desk, Dedicated Desk, Private Office,
+            Virtual Office, meeting rooms, a presentation room and Day Pass access.
+            Current listed workspace prices start at AED 100/day.
+          </p>
+        </section>
 
-      {/* ===== DIRECT ANSWER ===== */}
-      <section className="direct-answer">
-        <h2>Looking for Coworking Space in ADGM? Start Here.</h2>
-        <p>
-          Aegis Coworking offers coworking space in ADGM at Addax Tower, Al Reem Island, Abu
-          Dhabi — with hot desks, flexi desks, dedicated desks, private offices, virtual
-          offices, meeting rooms, a presentation room, and day passes, starting from AED
-          100. Most plans include a registered ADGM business address and 24/7 access.
-        </p>
-      </section>
-
-      {/* ===== CORE TOPIC ===== */}
-      <section className="about">
-        <span className="eyebrow">WHO WE ARE</span>
-        <h2>More Than a Desk: A Complete ADGM Workspace</h2>
-        <p className="about-lead">
-          A coworking space in ADGM is more than a place to sit — it's a registered business
-          address, meeting facilities, and a professional environment, all in one. Aegis
-          Coworking brings all of that together at Addax Tower.
-        </p>
-        <div className="about-grid">
-          <div className="about-block">
-            <div className="about-block-icon">🎯</div>
-            <h3>Why Businesses Choose Flexible Workspace</h3>
+        <section id="services" className="section services-section">
+          <div className="section-heading">
+            <p className="eyebrow">WORKSPACE OPTIONS</p>
+            <h2>Explore Coworking &amp; Office Space in ADGM</h2>
             <p>
-              No long lease, no fit-out cost, and a registered ADGM address available from day
-              one — flexible workspace in ADGM lets you start operating immediately.
+              Choose a workspace around how often you work, how much privacy you need,
+              whether you need a fixed desk, and whether your business needs meeting or
+              presentation facilities.
             </p>
           </div>
-          <div className="about-block">
-            <div className="about-block-icon">⚖️</div>
-            <h3>Coworking Space vs Traditional Office in ADGM</h3>
+
+          <div className="service-grid">
+            {services.map((service) => (
+              <article className="service-card" id={service.id} key={service.id}>
+                <div className="service-image">
+                  {service.image ? (
+                    <img src={service.image} alt={`${service.title} at Aegis Coworking in Addax Tower`} loading="lazy" decoding="async" />
+                  ) : (
+                    <div className="image-placeholder" aria-hidden="true">PRESENT</div>
+                  )}
+                </div>
+                <div className="service-body">
+                  <p className="service-tag">{service.tag}</p>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                  <div className="service-price">{service.price}</div>
+                  <ul>
+                    {service.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                  </ul>
+                  <a className="text-link" href={service.href}>
+                    Explore this option <span>→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="requirements" className="section split-section">
+          <div className="section-heading">
+            <p className="eyebrow">ADGM WORKSPACE GUIDE</p>
+            <h2>Before You Choose an ADGM Workspace, Know What to Check</h2>
             <p>
-              A traditional office means a multi-year lease and upfront fit-out. Coworking space
-              in ADGM gives you a ready desk or room, shared amenities, and the flexibility to
-              scale as your business grows.
+              Workspace and address requirements can depend on the business, licence
+              category and activity. Use these questions as a starting point and verify
+              the current requirements that apply to your entity.
             </p>
           </div>
-          <div className="about-block">
-            <div className="about-block-icon">🧩</div>
-            <h3>Flexible Workspace for Different Business Needs</h3>
+          <div className="info-list">
+            {requirements.map((item) => (
+              <article className="info-item" key={item.title}>
+                <span>01</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section business-centre-section">
+          <div className="section-heading centered">
+            <p className="eyebrow">BUSINESS CENTRE ADGM</p>
+            <h2>Need a Business Centre in ADGM? Look Beyond the Desk.</h2>
             <p>
-              From a single Day Pass to a Private Office for a growing team — every stage of
-              a business has a matching workspace option here.
+              A business centre in ADGM can bring workspace, business-presence options
+              and meeting facilities together in one professional location. At Aegis,
+              these options are available at Addax Tower on Al Reem Island.
             </p>
           </div>
-        </div>
-      </section>
+          <div className="three-column">
+            <article>
+              <span className="number">01</span>
+              <h3>Workspace</h3>
+              <p>Choose flexible seating, a fixed desk or a private office based on your working needs.</p>
+            </article>
+            <article>
+              <span className="number">02</span>
+              <h3>Business Presence</h3>
+              <p>Explore the business-address features associated with the relevant Aegis plan.</p>
+            </article>
+            <article>
+              <span className="number">03</span>
+              <h3>Meeting Facilities</h3>
+              <p>Use meeting and presentation spaces when your business needs a more formal setting.</p>
+            </article>
+          </div>
+        </section>
 
-      {/* ===== MAIN SERVICE CLUSTER ===== */}
-      <section id="services" className="pricing">
-        <span className="eyebrow">SERVICES</span>
-        <h2>Explore Coworking &amp; Office Space in ADGM</h2>
-        <p className="pricing-intro">
-          Aegis Coworking's two core desk plans — a shared Hot Desk / Flexi Desk and a
-          permanent Dedicated Desk — are detailed below. Every other workspace option, from
-          Private Office to Day Pass, follows underneath.
-        </p>
-        <div className="pricing-grid">
-          <div className="price-card">
-            <div className="price-card-image">
-              <img
-                src={flexiDeskImg}
-                alt="Hot desk and flexi desk workspace in ADGM, Addax Tower"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="price-card-body">
-              <h3>Hot Desk &amp; Flexi Desk in ADGM</h3>
-              <p className="price-card-label">Work where you need it, whenever you need it</p>
-              <p className="price-desc">
-                A Hot Desk and a Flexi Desk are the same offering at Aegis Coworking — a
-                shared, unassigned workspace in ADGM you can use any day, ideal if you don't need
-                the same spot every day but still want a professional place to work.
-              </p>
-              <p className="price-desc">
-                Fully furnished and accessible 24/7, with full access to meeting rooms, the
-                business lounge, and the wider coworking community at Office 3812, Addax Tower,
-                Al Reem Island.
-              </p>
-              <p className="price-rent-label">DISCOUNTED PRICE:</p>
-              <p className="price">AED 1,000</p>
-              <p className="price-period">Monthly</p>
-              <hr className="price-divider" />
-              <div className="price-perks">
-                <div>✓ No Deposit</div>
-                <div>✓ No Admin Fees</div>
-                <div>✓ No Setup Fees</div>
-                <div>✓ Free Registration</div>
-              </div>
-              <a href={`${MAIN_SITE}/pricing`} className="price-card-link">
-                Other Discounts &gt;
-              </a>
-            </div>
+        <section id="pricing" className="section pricing-section">
+          <div className="section-heading">
+            <p className="eyebrow">CURRENT LISTED PRICES</p>
+            <h2>What Does an ADGM Workspace Actually Cost?</h2>
+            <p>
+              Use the table below as a quick price reference. Meeting and presentation
+              facilities are quoted separately.
+            </p>
           </div>
 
-          <div className="price-card">
-            <div className="price-card-image">
-              <img
-                src={dedicatedDeskImg}
-                alt="Dedicated desk workspace in ADGM, Addax Tower"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="price-card-body">
-              <h3>Dedicated Desk in ADGM</h3>
-              <p className="price-card-label">Your own permanent workspace</p>
-              <p className="price-desc">
-                A dedicated desk in ADGM — one of Abu Dhabi's most established business
-                districts. If you work in ADGM regularly and want a workspace that is always
-                yours, a Dedicated Desk gives you the convenience and consistency of a private
-                workspace at a much lower cost.{' '}
-                <strong>
-                  Only AED 150 more than a Flexi Desk — making it an excellent option for
-                  regular users.
-                </strong>
-              </p>
-              <p className="price-desc">
-                No hidden charges apply and only due diligence fee applies for one time only.
-                Book your ADGM Coworking Space with Aegis Coworking that sits in office 3812,
-                Addax Tower, Al Reem Island.
-              </p>
-              <p className="price-rent-label">DISCOUNTED PRICE:</p>
-              <p className="price">AED 1,150</p>
-              <p className="price-period">Monthly</p>
-              <hr className="price-divider" />
-              <div className="price-perks">
-                <div>✓ No Deposit</div>
-                <div>✓ No Admin Fees</div>
-                <div>✓ No Setup Fees</div>
-                <div>✓ Free Registration</div>
-              </div>
-              <a href={`${MAIN_SITE}/contact`} className="price-card-link">
-                Request Quote &gt;
-              </a>
-            </div>
+          <div className="pricing-table-wrap">
+            <table className="pricing-table">
+              <thead>
+                <tr><th>Workspace</th><th>Starting price</th></tr>
+              </thead>
+              <tbody>
+                {pricing.map(([name, price, period]) => (
+                  <tr key={name}>
+                    <td>{name}</td>
+                    <td><strong>{price}</strong> {period && <span>{period}</span>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </div>
 
-        <div className="other-services-grid">
-          {otherServices.map((s) => (
-            <a href={s.href} className="other-service-card" key={s.id}>
-              {s.img && <img src={s.img} alt={s.title} loading="lazy" decoding="async" />}
-              {!s.img && <div className="other-service-placeholder">🎤</div>}
-              <div className="other-service-body">
-                <h3>{s.title}</h3>
-                <p>{s.blurb}</p>
-                <span className="other-service-price">{s.price}</span>
-                <span className="price-card-link">View on Aegis Coworking &gt;</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+          <div className="pricing-note">
+            <strong>Pricing note:</strong> Confirm current inclusions, eligibility and any applicable
+            one-time fees with Aegis before purchase or registration.
+          </div>
+        </section>
 
-      {/* ===== ADGM REQUIREMENTS ===== */}
-      <section className="requirements">
-        <span className="eyebrow">GOOD TO KNOW</span>
-        <h2>Before You Choose an ADGM Workspace, Know the Requirements</h2>
-        <div className="requirements-grid">
-          {requirements.map((r) => (
-            <div className="requirements-item" key={r.q}>
-              <h3>{r.q}</h3>
-              <p>{r.a}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ===== BUSINESS CENTRE ===== */}
-      <section className="about">
-        <span className="eyebrow">BUSINESS CENTRE</span>
-        <h2>Need a Business Centre in ADGM? Here's What to Look For</h2>
-        <div className="about-grid">
-          {businessCentre.map((b) => (
-            <div className="about-block" key={b.h}>
-              <h3>{b.h}</h3>
-              <p>{b.p}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ===== PRICING TABLE ===== */}
-      <section id="pricing" className="pricing-table-section">
-        <span className="eyebrow">PRICING</span>
-        <h2>What Does an ADGM Workspace Actually Cost?</h2>
-        <p className="pricing-intro">
-          Straightforward pricing for coworking space in ADGM — no hidden fees beyond the
-          one-time due diligence fee where a registered address is included.
-        </p>
-        <div className="price-table-wrap">
-          <table className="price-table">
-            <thead>
-              <tr>
-                <th>Workspace</th>
-                <th>Starting Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {pricingRows.map((row) => (
-                <tr key={row.name}>
-                  <td>{row.name}</td>
-                  <td>
-                    {row.price}
-                    <span className="price-table-period">{row.period}</span>
-                  </td>
+        <section className="section comparison-section">
+          <div className="section-heading">
+            <p className="eyebrow">COMPARE</p>
+            <h2>Which ADGM Workspace Fits the Way You Work?</h2>
+          </div>
+          <div className="comparison-wrap">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Need</th>
+                  <th>Day Pass</th>
+                  <th>Flexi Desk</th>
+                  <th>Dedicated Desk</th>
+                  <th>Private Office</th>
+                  <th>Virtual Office</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+              </thead>
+              <tbody>
+                <tr><td>One-day workspace</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                <tr><td>Flexible seating</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+                <tr><td>Fixed workstation</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td></tr>
+                <tr><td>Private room</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+                <tr><td>Business-address feature</td><td>—</td><td>—</td><td>Included</td><td>Included</td><td>Plan dependent</td></tr>
+                <tr><td>Best suited for</td><td>Visitors</td><td>Flexible users</td><td>Regular users</td><td>Teams</td><td>Remote businesses</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-      {/* ===== COMPARISON ===== */}
-      <section className="comparison">
-        <span className="eyebrow">COMPARE</span>
-        <h2>Which ADGM Workspace Fits the Way You Work?</h2>
-        <div className="comparison-table-wrap">
-          <table className="comparison-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Day Pass</th>
-                <th>Flexi Desk</th>
-                <th>Dedicated Desk</th>
-                <th>Private Office</th>
-                <th>Virtual Office</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Short-term workspace</td>
-                <td>✓</td><td></td><td></td><td></td><td></td>
-              </tr>
-              <tr>
-                <td>Flexible seating</td>
-                <td>✓</td><td>✓</td><td></td><td></td><td></td>
-              </tr>
-              <tr>
-                <td>Fixed desk</td>
-                <td></td><td></td><td>✓</td><td></td><td></td>
-              </tr>
-              <tr>
-                <td>Private office</td>
-                <td></td><td></td><td></td><td>✓</td><td></td>
-              </tr>
-              <tr>
-                <td>Business address</td>
-                <td>Plan-dependent</td><td>Plan-dependent</td><td>Included</td><td>Included</td><td>Plan-dependent</td>
-              </tr>
-              <tr>
-                <td>Team workspace</td>
-                <td></td><td></td><td></td><td>✓</td><td></td>
-              </tr>
-              <tr>
-                <td>Meeting facilities</td>
-                <td>Where applicable</td><td>Where applicable</td><td>Where applicable</td><td>Where applicable</td><td></td>
-              </tr>
-              <tr>
-                <td>Best suited for</td>
-                <td>Visitors</td><td>Flexible users</td><td>Regular users</td><td>Teams</td><td>Remote businesses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+        <section className="section decision-section">
+          <div className="section-heading centered">
+            <p className="eyebrow">NOT SURE WHERE TO START?</p>
+            <h2>Got an ADGM Workspace Problem? Start Here.</h2>
+          </div>
+          <div className="problem-grid">
+            {problems.map(([question, answer, href]) => (
+              <a href={href} className="problem-card" key={question}>
+                <span>“</span>
+                <h3>{question}</h3>
+                <strong>{answer} →</strong>
+              </a>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== DECISION ===== */}
-      <section className="decision">
-        <span className="eyebrow">QUICK DECISION</span>
-        <h2>Which ADGM Workspace Do You Actually Need?</h2>
-        <div className="decision-grid">
-          {decisions.map((d) => (
-            <a href={d.href} className="decision-card" key={d.q}>
-              <h3>{d.q}</h3>
-              <span className="decision-answer">{d.a} &gt;</span>
-            </a>
-          ))}
-        </div>
-      </section>
+        <section className="section audience-section">
+          <div className="section-heading centered">
+            <p className="eyebrow">BUILT AROUND REAL WORK</p>
+            <h2>Workspace for the Way You Work</h2>
+          </div>
+          <div className="audience-grid">
+            {audiences.map(([title, text]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== LOCAL SEO / FIND US ===== */}
-      <section id="find-us" className="location-highlight">
-        <div className="location-content">
-          <div className="location-text">
-            <span className="contact-eyebrow">WORK WHERE ADGM MEETS AL REEM ISLAND</span>
-            <h2>Located in Addax Tower, Al Reem Island</h2>
+        <section id="location" className="section location-section">
+          <div className="location-copy">
+            <p className="eyebrow">ADDAX TOWER · AL REEM ISLAND</p>
+            <h2>Work Where ADGM Meets Al Reem Island</h2>
             <p>
-              This workspace in ADGM sits in Addax Tower, Al Reem Island, within ADGM, Abu
-              Dhabi's leading financial free zone. Easy access to banks, restaurants, business
-              hubs, and the waterfront makes it a convenient business center in ADGM for
-              startups, freelancers, and small businesses. Have questions? Check our{' '}
-              <a href="#faq">FAQs</a>.
+              Aegis Coworking is located at Office 3812, Addax Tower, Al Reem Island,
+              Abu Dhabi. The location gives businesses a professional workspace in the
+              ADGM area with access to coworking, desks, offices and meeting facilities.
             </p>
-            <div className="local-seo-blurbs">
-              <div><strong>Coworking Space at Addax Tower</strong><span>Directly inside Addax Tower, ADGM's own business district.</span></div>
-              <div><strong>Coworking Space on Al Reem Island</strong><span>Minutes from the wider Al Reem Island business and residential community.</span></div>
-              <div><strong>Coworking Near ADGM</strong><span>Inside ADGM itself — not just nearby.</span></div>
+            <div className="address-box">
+              <strong>Aegis Coworking</strong>
+              <span>Office 3812, Addax Tower</span>
+              <span>Al Reem Island, Abu Dhabi, UAE</span>
             </div>
-            <div className="address-card">
-              <div className="address-icon">📍</div>
-              <div>
-                <strong>Addax Tower</strong>
-                <span>Al Reem Island, Abu Dhabi, United Arab Emirates</span>
-              </div>
-            </div>
-            <div className="location-stats">
-              <div className="location-stat">
-                <div className="stat-icon">✈️</div>
-                <strong>15 minutes</strong>
-                <span>To Abu Dhabi Airport</span>
-              </div>
-              <div className="location-stat">
-                <div className="stat-icon">🏖️</div>
-                <strong>5 minutes</strong>
-                <span>To the Waterfront</span>
-              </div>
-              <div className="location-stat">
-                <div className="stat-icon">🔑</div>
-                <strong>24/7</strong>
-                <span>Member Access</span>
-              </div>
+            <div className="location-links">
+              <a href="https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
+              <a href={`${MAIN_SITE}/contact`}>Get directions / contact →</a>
             </div>
           </div>
-          <div className="location-map-frame">
+          <div className="map-frame">
             <iframe
-              title="Addax Tower Location"
+              title="Aegis Coworking location at Addax Tower, Al Reem Island"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.6108984947837!2d54.400594374417075!3d24.498935159630403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e67ada3bb067b%3A0x5674c5ba5c0f061e!2sAegis%20Coworking%20Space%20ADGM!5e0!3m2!1sen!2s!4v1786701334186!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
-            ></iframe>
+              allowFullScreen
+            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ===== AMENITIES ===== */}
-      <section className="amenities">
-        <span className="eyebrow">AMENITIES</span>
-        <h2>Everything You Need to Get Business Done</h2>
-        <div className="amenity-groups-grid">
-          {amenityGroups.map((g) => (
-            <div className="amenity-group" key={g.h}>
-              <h3>{g.h}</h3>
-              <div className="amenity-chips">
-                {g.items.map((item) => (
-                  <span className="amenity-chip" key={item}>{item}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="section facilities-section">
+          <div className="section-heading">
+            <p className="eyebrow">AMENITIES & FACILITIES</p>
+            <h2>Everything You Need to Get Business Done</h2>
+          </div>
+          <div className="facility-grid">
+            <article><h3>Work-Ready Spaces</h3><p>Furnished coworking areas with practical work facilities.</p></article>
+            <article><h3>Meeting Facilities</h3><p>Meeting rooms for client conversations and business appointments.</p></article>
+            <article><h3>Presentation Facilities</h3><p>Presentation space with 4K display, professional audio and AV support.</p></article>
+            <article><h3>Professional Environment</h3><p>A business-focused environment in Addax Tower, Al Reem Island.</p></article>
+            <article><h3>Flexible Access</h3><p>Desk members have 24/7 access according to their applicable plan.</p></article>
+            <article><h3>Business Support</h3><p>Choose a workspace and contact Aegis for help understanding the available options.</p></article>
+          </div>
+        </section>
 
-      {/* ===== AUDIENCE ===== */}
-      <section className="audience">
-        <span className="eyebrow">WHO IT'S FOR</span>
-        <h2>Workspace for the Way You Work</h2>
-        <div className="audience-grid">
-          {audiences.map((a) => (
-            <div className="audience-card" key={a.h}>
-              <h3>{a.h}</h3>
-              <p>{a.p}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="section guides-section">
+          <div className="section-heading">
+            <p className="eyebrow">AEGIS KNOWLEDGE HUB</p>
+            <h2>The ADGM Workspace Questions People Actually Ask</h2>
+            <p>
+              These guides provide deeper context around ADGM coworking, dedicated desks,
+              workspace costs, Addax Tower and business setup questions.
+            </p>
+          </div>
+          <div className="guides-grid">
+            {blogGuides.map((guide) => (
+              <article className="guide-card" key={guide.title}>
+                <p className="guide-label">AEGIS GUIDE</p>
+                <h3>{guide.title}</h3>
+                <p>{guide.text}</p>
+                <a className="text-link" href={`${MAIN_SITE}/blogs`}>Read the full Aegis guide →</a>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== PROBLEMS -> SOLUTIONS ===== */}
-      <section className="problems">
-        <span className="eyebrow">NOT SURE WHERE TO START?</span>
-        <h2>Got an ADGM Workspace Problem? Start Here.</h2>
-        <div className="problems-grid">
-          {problems.map((p) => (
-            <a href={p.href} className="problem-card" key={p.q}>
-              <p className="problem-q">“{p.q}”</p>
-              <span className="decision-answer">→ {p.a}</span>
-            </a>
-          ))}
-        </div>
-      </section>
+        <section id="faq" className="section faq-section">
+          <div className="section-heading centered">
+            <p className="eyebrow">FAQ</p>
+            <h2>Still Wondering How ADGM Workspace Works?</h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map(([question, answer], index) => (
+              <article className={`faq-item ${openFaq === index ? 'open' : ''}`} key={question}>
+                <button type="button" onClick={() => toggleFaq(index)} aria-expanded={openFaq === index}>
+                  <span>{question}</span>
+                  <b>{openFaq === index ? '−' : '+'}</b>
+                </button>
+                {openFaq === index && <div className="faq-answer"><p>{answer}</p></div>}
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* ===== BLOG / KNOWLEDGE HUB ===== */}
-      <section className="blog-hub">
-        <span className="eyebrow">LEARN MORE</span>
-        <h2>The ADGM Workspace Questions People Actually Ask</h2>
-        <div className="blog-grid">
-          {blogCategories.map((b) => (
-            <a href={`${MAIN_SITE}/blogs`} className="blog-card" key={b.h}>
-              <h3>{b.h}</h3>
-              <p>{b.p}</p>
-              <span className="price-card-link">Read the Aegis guide &gt;</span>
-            </a>
-          ))}
-        </div>
-      </section>
+        <section className="final-cta">
+          <p className="eyebrow">READY WHEN YOU ARE</p>
+          <h2>Find the ADGM Workspace That Fits Your Business.</h2>
+          <p>
+            Explore desks, offices and meeting facilities at Aegis Coworking in Addax Tower,
+            Al Reem Island, Abu Dhabi.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href={`${MAIN_SITE}/contact`}>Book a Tour</a>
+            <a className="button button-outline-light" href={MAIN_SITE}>Explore Aegis Coworking</a>
+          </div>
+        </section>
+      </main>
 
-      {/* ===== FAQ ===== */}
-      <section id="faq" className="faq">
-        <span className="eyebrow">FAQ</span>
-        <h2>Still Wondering How ADGM Workspace Works?</h2>
-        <div className="faq-list">
-          {faqs.map((item, index) => (
-            <div className={`faq-item ${openFaq === index ? 'faq-item-open' : ''}`} key={item.q}>
-              <button className="faq-question" onClick={() => toggleFaq(index)}>
-                {item.q}
-                <span className="faq-toggle">{openFaq === index ? '−' : '+'}</span>
-              </button>
-              {openFaq === index && <p className="faq-answer">{item.a}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ===== FINAL CTA ===== */}
-      <section className="final-cta">
-        <span className="eyebrow">GET STARTED</span>
-        <h2>Your Next Workspace Is Closer Than You Think</h2>
-        <p>
-          Explore coworking and office space at Aegis Coworking in Addax Tower, Al Reem Island.
-          Choose from flexible desks, dedicated workspaces, private offices, virtual-office
-          options and meeting facilities based on your business needs.
-        </p>
-        <div className="hero-ctas">
-          <a href={`${MAIN_SITE}/contact`} className="btn-primary">Book a Tour</a>
-          <a href={MAIN_SITE} className="btn-outline">Explore Aegis Workspace</a>
-          <a href={`${MAIN_SITE}/contact`} className="btn-outline">Contact Aegis</a>
-        </div>
-      </section>
-
-      {/* ===== FOOTER ===== */}
-      <footer className="office-footer">
+      <footer className="site-footer">
         <div className="footer-grid">
-          <div className="footer-col footer-brand">
-            <div className="logo footer-logo">
-              AEGIS <span className="logo-accent">COWORKING</span>
-            </div>
-            <p>Business center in ADGM · Addax Tower, Al Reem Island, Abu Dhabi.</p>
-            <div className="footer-socials">
-              <a href="https://www.instagram.com/aegis.coworking/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" />
-                  <circle cx="12" cy="12" r="4.5" stroke="currentColor" strokeWidth="2" />
-                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/company/aegis-coworking/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" strokeWidth="2" />
-                  <rect x="6.5" y="10" width="2.5" height="8" fill="currentColor" />
-                  <circle cx="7.75" cy="6.75" r="1.5" fill="currentColor" />
-                  <path d="M11.5 18V10H14V11.2C14.5 10.4 15.5 9.7 17 9.7C19 9.7 20 11 20 13.3V18H17.5V13.7C17.5 12.5 17 11.8 16 11.8C15 11.8 14.3 12.5 14.3 13.7V18H11.5Z" fill="currentColor" />
-                </svg>
-              </a>
-              <a href="https://www.facebook.com/aegis.coworking" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" />
-                  <path d="M14.5 8.5H13C12.5 8.5 12 9 12 9.5V11H14.5L14 13.5H12V19H9.5V13.5H8V11H9.5V9.2C9.5 7.4 10.8 6 12.7 6H14.5V8.5Z" fill="currentColor" />
-                </svg>
-              </a>
+          <div className="footer-brand">
+            <a className="brand footer-brand-link" href={MAIN_SITE}>
+              <img src={aegisLogo} alt="Aegis Coworking" width="52" height="52" />
+              <span><strong>AEGIS</strong><small>COWORKING</small></span>
+            </a>
+            <p>Business centre in ADGM · Addax Tower, Al Reem Island, Abu Dhabi.</p>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/company/aegis-coworking/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/aegis.coworking/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.facebook.com/aegis.coworking" target="_blank" rel="noopener noreferrer">Facebook</a>
             </div>
           </div>
 
-          <div className="footer-col">
+          <div>
             <h3>WORKSPACE</h3>
             <a href="#services">Coworking Space ADGM</a>
-            <a href="#services">Hot Desk ADGM</a>
-            <a href="#services">Flexi Desk</a>
-            <a href="#services">Dedicated Desk ADGM</a>
+            <a href="#hot-desk">Hot Desk ADGM</a>
+            <a href="#dedicated-desk">Dedicated Desk ADGM</a>
             <a href={`${MAIN_SITE}/private-office`}>Private Office ADGM</a>
             <a href={`${MAIN_SITE}/virtual-office`}>Virtual Office ADGM</a>
             <a href={`${MAIN_SITE}/meeting-room`}>Meeting Room ADGM</a>
             <a href={`${MAIN_SITE}/presentation-room`}>Presentation Room</a>
-            <a href={`${MAIN_SITE}/day-pass`}>Day Pass</a>
+            <a href={`${MAIN_SITE}/day-pass`}>Day Pass ADGM</a>
           </div>
 
-          <div className="footer-col">
+          <div>
             <h3>ADGM</h3>
-            <a href="#services">ADGM Workspace</a>
+            <a href="#requirements">ADGM Workspace Guide</a>
+            <a href="#pricing">ADGM Workspace Prices</a>
             <a href="#services">ADGM Office Space</a>
-            <a href="#about">Business Centre ADGM</a>
-            <a href={`${MAIN_SITE}/virtual-office`}>Business Address</a>
-            <a href={`${MAIN_SITE}/blogs`}>ADGM Workspace Guide</a>
+            <a href="#location">Business Centre ADGM</a>
+            <a href="#location">Business Address</a>
           </div>
 
-          <div className="footer-col">
+          <div>
             <h3>LOCATION</h3>
-            <a href="#find-us">Addax Tower</a>
-            <a href="#find-us">Al Reem Island</a>
-            <a href="#find-us">Abu Dhabi</a>
-            <a href="#find-us">Near ADGM</a>
+            <a href="#location">Addax Tower</a>
+            <a href="#location">Al Reem Island</a>
+            <a href="#location">Abu Dhabi</a>
+            <a href="#location">Near ADGM</a>
+            <a href="https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z" target="_blank" rel="noopener noreferrer">Google Maps</a>
           </div>
 
-          <div className="footer-col">
-            <h3>CONTACT US</h3>
-            <p><strong>Phone:</strong> <a href="tel:+971503926316">+971 50 392 6316</a></p>
-            <p><strong>Email:</strong> <a href="mailto:contact@aegiscoworking.ae">contact@aegiscoworking.ae</a></p>
-            <p><strong>Address:</strong> 3812 Addax Tower, Al Reem Island RT3, Abu Dhabi</p>
-            <a href={`${MAIN_SITE}/contact`}>Contact Us &gt;</a>
+          <div>
+            <h3>CONTACT</h3>
+            <a href="tel:+971503926316">+971 50 392 6316</a>
+            <a href="mailto:contact@aegiscoworking.ae">contact@aegiscoworking.ae</a>
+            <span>Office 3812, Addax Tower,<br />Al Reem Island, Abu Dhabi</span>
+            <a className="footer-contact" href={`${MAIN_SITE}/contact`}>Contact Aegis →</a>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Aegis Coworking. All rights reserved.</p>
-          <p>
-            <a href="https://aegiscoworking.ae/terms">Terms &amp; Conditions</a> ·{' '}
-            <a href="https://aegiscoworking.ae/privacy">Privacy Policy</a>
-          </p>
+          <span>© 2026 Aegis Coworking. All rights reserved.</span>
+          <span>
+            <a href={`${MAIN_SITE}/terms`}>Terms &amp; Conditions</a>
+            {' · '}
+            <a href={`${MAIN_SITE}/privacy`}>Privacy Policy</a>
+          </span>
         </div>
       </footer>
     </>
