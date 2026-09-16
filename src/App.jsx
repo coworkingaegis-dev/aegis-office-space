@@ -547,24 +547,7 @@ function App() {
         </section>
 
        
-        <section id="location" className="section location-section">
-          <div className="location-copy">
-            <p className="eyebrow">ADDAX TOWER · AL REEM ISLAND</p>
-            <h2>Work Where ADGM Meets Al Reem Island</h2>
-            <p>
-              Aegis Coworking is located at Office 3812, Addax Tower, Al Reem Island,
-              Abu Dhabi. The location gives businesses a professional workspace in the
-              ADGM area with access to coworking, desks, offices and meeting facilities.
-            </p>
-            <div className="address-box">
-              <strong>Aegis Coworking</strong>
-              <span>Office 3812, Addax Tower</span>
-              <span>Al Reem Island, Abu Dhabi, UAE</span>
-            </div>
-           
-          </div>
-         
-        </section>
+        
 
         <section className="section facilities-section">
           <div className="section-heading">
@@ -631,7 +614,36 @@ function App() {
             <a className="button button-outline-light" href={MAIN_SITE}>Explore Aegis Coworking</a>
           </div>
         </section>
+
+        <section id="location" className="section location-section">
+          <div className="location-copy">
+            <p className="eyebrow">ADDAX TOWER · AL REEM ISLAND</p>
+            <h2>Work Where ADGM Meets Al Reem Island</h2>
+            <p>
+              Aegis Coworking is located at Office 3812, Addax Tower, Al Reem Island,
+              Abu Dhabi. The location gives businesses a professional workspace in the
+              ADGM area with access to coworking, desks, offices and meeting facilities.
+            </p>
+            <div className="address-box">
+              <strong>Aegis Coworking</strong>
+              <span>Office 3812, Addax Tower</span>
+              <span>Al Reem Island, Abu Dhabi, UAE</span>
+            </div>
+
+          </div>
+          <div className="map-frame">
+            <iframe
+              title="Aegis Coworking location at Addax Tower, Al Reem Island"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.6108984947837!2d54.400594374417075!3d24.498935159630403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e67ada3bb067b%3A0x5674c5ba5c0f061e!2sAegis%20Coworking%20Space%20ADGM!5e0!3m2!1sen!2s!4v1786701334186!5m2!1sen!2s"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </section>
       </main>
+
+      
 
       <footer className="site-footer">
         <div className="footer-grid">
@@ -650,39 +662,24 @@ function App() {
 
           <div>
             <h3>WORKSPACE</h3>
-            <a href="#services">Coworking Space ADGM</a>
-            <a href="#hot-desk">Hot Desk ADGM</a>
-            <a href="#dedicated-desk">Dedicated Desk ADGM</a>
+            <a href="https://www.aegiscoworking.ae/">Coworking Space ADGM</a>
+            <a href="https://www.aegiscoworking.ae/office-space">Hot Desk ADGM</a>
+            <a href="https://www.aegiscoworking.ae/office-space">Dedicated Desk ADGM</a>
             <a href={`${MAIN_SITE}/private-office`}>Private Office ADGM</a>
             <a href={`${MAIN_SITE}/virtual-office`}>Virtual Office ADGM</a>
             <a href={`${MAIN_SITE}/meeting-room`}>Meeting Room ADGM</a>
             <a href={`${MAIN_SITE}/day-pass`}>Day Pass ADGM</a>
           </div>
 
-          <div>
-            <h3>ADGM</h3>
-            <a href="#requirements">ADGM Workspace Guide</a>
-            <a href="#pricing">ADGM Workspace Prices</a>
-            <a href="#services">ADGM Office Space</a>
-            <a href="#location">Business Centre ADGM</a>
-            <a href="#location">Business Address</a>
-          </div>
+          
 
-          <div>
-            <h3>LOCATION</h3>
-            <a href="#location">Addax Tower</a>
-            <a href="#location">Al Reem Island</a>
-            <a href="#location">Abu Dhabi</a>
-            <a href="#location">Near ADGM</a>
-            <a href="https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z" target="_blank" rel="noopener noreferrer">Google Maps</a>
-          </div>
-
+          
           <div>
             <h3>CONTACT</h3>
             <a href="tel:+971503926316">+971 50 392 6316</a>
             <a href="mailto:contact@aegiscoworking.ae">contact@aegiscoworking.ae</a>
             <span>Office 3812, Addax Tower,<br />Al Reem Island, Abu Dhabi</span>
-            <a className="footer-contact" href={`${MAIN_SITE}/contact`}>Contact Aegis →</a>
+            
           </div>
         </div>
 
