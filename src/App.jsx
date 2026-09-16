@@ -134,9 +134,9 @@ const blogGuides = [
     href: `${MAIN_SITE}/blog/adgm-coworking-visa-quota-employees-per-desk`,
   },
   {
-    title: 'Addax Tower ADGM Business Workspace Location',
+    title: 'Addax Tower ADGM for Businesses: Workspace, Location & Practical Considerations',
     text: 'A location-focused guide explaining why Addax Tower matters when looking for workspace in ADGM and Al Reem Island.',
-    href: `${MAIN_SITE}/blog/addax-tower-adgm-business-workspace-location`,
+    href: `https://www.aegiscoworking.ae/blog/addax-tower-adgm-business-workspace`,
   },
   {
     title: 'ADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?',
@@ -144,9 +144,9 @@ const blogGuides = [
     href: `${MAIN_SITE}/blog/adgm-vs-difc-workspace-cost`,
   },
   {
-    title: 'Do You Need One Dedicated Desk Per Employee in ADGM?',
+    title: 'Do You Need One Dedicated Desk Per Employee in ADGM? Physical Seats vs. Visa Capacity',
     text: 'A guide focused on the difference between physical seating and business capacity, and the questions businesses should check for their specific setup.',
-    href: `${MAIN_SITE}/blog/adgm-dedicated-desk-visa-capacity-vs-seating`,
+    href: `https://www.aegiscoworking.ae/blog/adgm-dedicated-desk-visa-capacity-vs-seating`,
   },
 ]
 
