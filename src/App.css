@@ -960,54 +960,128 @@ section > * {
 }
 
 /* =========================================================
-   FAQ
+   FAQ — Aegis-style rounded accordion cards
    ========================================================= */
 
 .faq-section {
-  background: var(--surface);
+  background: #fff;
+}
+
+.faq-section .section-heading {
+  margin-bottom: 38px;
 }
 
 .faq-list {
-  max-width: 900px;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .faq-item {
-  border-top: 1px solid var(--line);
+  width: 100%;
+  margin: 0;
+  border: 1px solid #e4e1da;
+  border-radius: 16px;
+  background: #f5f3ef;
+  box-shadow: 0 5px 18px rgba(20, 28, 24, 0.05);
+  overflow: hidden;
 }
 
-.faq-item:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
+.faq-item button,
 .faq-question {
   width: 100%;
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 24px;
+  padding: 20px 26px;
   border: 0;
   background: transparent;
-  color: var(--text);
+  color: #111915;
   text-align: left;
+  font-family: inherit;
   font-size: 15px;
+  line-height: 1.35;
   font-weight: 700;
   cursor: pointer;
+  appearance: none;
 }
 
+.faq-item button > span:first-child,
+.faq-question > span:first-child {
+  min-width: 0;
+  flex: 1;
+}
+
+.faq-item button b,
 .faq-question span:last-child {
-  color: var(--green);
-  font-size: 20px;
-  font-weight: 400;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e2eee9;
+  color: #14634f;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.faq-item button:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.faq-item button:focus-visible {
+  outline: 2px solid #17684f;
+  outline-offset: -2px;
 }
 
 .faq-answer {
-  padding: 0 45px 20px 0;
+  padding: 0 26px 22px;
 }
 
 .faq-answer p {
-  color: var(--muted);
+  max-width: 680px;
+  margin: 0;
+  color: #59635e;
   font-size: 14px;
+  line-height: 1.7;
+}
+
+.faq-item.open {
+  background: #f3f1ec;
+}
+
+@media (max-width: 700px) {
+  .faq-list {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .faq-item button,
+  .faq-question {
+    min-height: 68px;
+    padding: 18px 20px;
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .faq-item button b,
+  .faq-question span:last-child {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 17px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 19px;
+  }
 }
 
 /* =========================================================
