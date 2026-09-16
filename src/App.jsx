@@ -498,10 +498,7 @@ function App() {
             </table>
           </div>
 
-          <div className="pricing-note">
-            <strong>Pricing note:</strong> Confirm current inclusions, eligibility and any applicable
-            one-time fees with Aegis before purchase or registration.
-          </div>
+        
         </section>
 
         <section className="section comparison-section">
@@ -549,21 +546,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section audience-section">
-          <div className="section-heading centered">
-            <p className="eyebrow">BUILT AROUND REAL WORK</p>
-            <h2>Workspace for the Way You Work</h2>
-          </div>
-          <div className="audience-grid">
-            {audiences.map(([title, text]) => (
-              <article key={title}>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
+       
         <section id="location" className="section location-section">
           <div className="location-copy">
             <p className="eyebrow">ADDAX TOWER · AL REEM ISLAND</p>
@@ -578,20 +561,9 @@ function App() {
               <span>Office 3812, Addax Tower</span>
               <span>Al Reem Island, Abu Dhabi, UAE</span>
             </div>
-            <div className="location-links">
-              <a href="https://www.google.com/maps/place/Aegis+Coworking+Space+ADGM/@24.4989303,54.4031693,17z" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
-              <a href={`${MAIN_SITE}/contact`}>Get directions / contact →</a>
-            </div>
+           
           </div>
-          <div className="map-frame">
-            <iframe
-              title="Aegis Coworking location at Addax Tower, Al Reem Island"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.6108984947837!2d54.400594374417075!3d24.498935159630403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e67ada3bb067b%3A0x5674c5ba5c0f061e!2sAegis%20Coworking%20Space%20ADGM!5e0!3m2!1sen!2s!4v1786701334186!5m2!1sen!2s"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
+         
         </section>
 
         <section className="section facilities-section">
