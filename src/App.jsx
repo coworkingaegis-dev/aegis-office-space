@@ -152,8 +152,8 @@ const problems = [
 const blogCategories = [
   { h: 'ADGM Coworking & Workspace Guides', p: 'How coworking works in ADGM, and what to expect as a member.' },
   { h: 'Dedicated Desk ADGM Guides', p: 'Deeper guides on using a Dedicated Desk as your registered business address.' },
-  { h: 'ADGM Cost & Comparison Guides', p: "Including \u201cADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?\u201d" },
-  { h: 'Addax Tower & Location Guides', p: 'What it\u2019s like working from Addax Tower, Al Reem Island.' },
+  { h: 'ADGM Cost & Comparison Guides', p: "Including “ADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?”" },
+  { h: 'Addax Tower & Location Guides', p: 'What it’s like working from Addax Tower, Al Reem Island.' },
 ]
 
 /* ---------- FAQ ---------- */
@@ -163,7 +163,7 @@ const faqs = [
     a: 'A coworking space in ADGM is a shared workspace inside Abu Dhabi Global Market where businesses can rent a desk or office, often including a registered business address, instead of leasing a traditional office.',
   },
   {
-    q: 'Flexi Desk vs Dedicated Desk in ADGM — what\u2019s the difference?',
+    q: 'Flexi Desk vs Dedicated Desk in ADGM — what’s the difference?',
     a: (
       <>
         A Flexi Desk in ADGM (also known as a Hot Desk) is a shared workspace, ideal if you don't
@@ -344,14 +344,14 @@ function App() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             '@id': `${SITE_URL}/#business`,
-            name: 'Aegis Coworking \u2013 Office Space in ADGM',
+            name: 'Aegis Coworking – Office Space in ADGM',
             url: `${SITE_URL}/`,
             logo: 'https://www.aegiscoworking.ae/logo.png',
             image: 'https://www.aegiscoworking.ae/og-image.jpg',
             telephone: '+971503926316',
             email: 'contact@aegiscoworking.ae',
             description:
-              'Coworking space in ADGM, Addax Tower, Al Reem Island \u2014 hot desks, flexi desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes.',
+              'Coworking space in ADGM, Addax Tower, Al Reem Island — hot desks, flexi desks, dedicated desks, private offices, virtual offices, meeting rooms and day passes.',
             priceRange: '$$',
             address: {
               '@type': 'PostalAddress',
@@ -491,7 +491,7 @@ function App() {
 
       {/* ===== HERO ===== */}
       <section className="hero">
-        <span className="eyebrow">ADGM \u00b7 ADDAX TOWER \u00b7 AL REEM ISLAND</span>
+        <span className="eyebrow">ADGM · ADDAX TOWER · AL REEM ISLAND</span>
         <h1>Your ADGM Workspace Starts Here</h1>
         <p className="hero-desc">
           Looking for a coworking space in ADGM, Abu Dhabi? Explore flexible workspace at Aegis
@@ -510,7 +510,7 @@ function App() {
         <h2>Looking for Coworking Space in ADGM? Start Here.</h2>
         <p>
           Aegis Coworking offers coworking space in ADGM at Addax Tower, Al Reem Island, Abu
-          Dhabi \u2014 with hot desks, flexi desks, dedicated desks, private offices, virtual
+          Dhabi — with hot desks, flexi desks, dedicated desks, private offices, virtual
           offices, meeting rooms, a presentation room, and day passes, starting from AED
           100. Most plans include a registered ADGM business address and 24/7 access.
         </p>
@@ -521,21 +521,21 @@ function App() {
         <span className="eyebrow">WHO WE ARE</span>
         <h2>More Than a Desk: A Complete ADGM Workspace</h2>
         <p className="about-lead">
-          A coworking space in ADGM is more than a place to sit \u2014 it's a registered business
+          A coworking space in ADGM is more than a place to sit — it's a registered business
           address, meeting facilities, and a professional environment, all in one. Aegis
           Coworking brings all of that together at Addax Tower.
         </p>
         <div className="about-grid">
           <div className="about-block">
-            <div className="about-block-icon">\ud83c\udfaf</div>
+            <div className="about-block-icon">🎯</div>
             <h3>Why Businesses Choose Flexible Workspace</h3>
             <p>
               No long lease, no fit-out cost, and a registered ADGM address available from day
-              one \u2014 flexible workspace in ADGM lets you start operating immediately.
+              one — flexible workspace in ADGM lets you start operating immediately.
             </p>
           </div>
           <div className="about-block">
-            <div className="about-block-icon">\u2696\ufe0f</div>
+            <div className="about-block-icon">⚖️</div>
             <h3>Coworking Space vs Traditional Office in ADGM</h3>
             <p>
               A traditional office means a multi-year lease and upfront fit-out. Coworking space
@@ -544,10 +544,10 @@ function App() {
             </p>
           </div>
           <div className="about-block">
-            <div className="about-block-icon">\ud83e\udde9</div>
+            <div className="about-block-icon">🧩</div>
             <h3>Flexible Workspace for Different Business Needs</h3>
             <p>
-              From a single Day Pass to a Private Office for a growing team \u2014 every stage of
+              From a single Day Pass to a Private Office for a growing team — every stage of
               a business has a matching workspace option here.
             </p>
           </div>
@@ -559,8 +559,8 @@ function App() {
         <span className="eyebrow">SERVICES</span>
         <h2>Explore Coworking &amp; Office Space in ADGM</h2>
         <p className="pricing-intro">
-          Aegis Coworking's two core desk plans \u2014 a shared Hot Desk / Flexi Desk and a
-          permanent Dedicated Desk \u2014 are detailed below. Every other workspace option, from
+          Aegis Coworking's two core desk plans — a shared Hot Desk / Flexi Desk and a
+          permanent Dedicated Desk — are detailed below. Every other workspace option, from
           Private Office to Day Pass, follows underneath.
         </p>
         <div className="pricing-grid">
@@ -577,7 +577,7 @@ function App() {
               <h3>Hot Desk &amp; Flexi Desk in ADGM</h3>
               <p className="price-card-label">Work where you need it, whenever you need it</p>
               <p className="price-desc">
-                A Hot Desk and a Flexi Desk are the same offering at Aegis Coworking \u2014 a
+                A Hot Desk and a Flexi Desk are the same offering at Aegis Coworking — a
                 shared, unassigned workspace in ADGM you can use any day, ideal if you don't need
                 the same spot every day but still want a professional place to work.
               </p>
@@ -591,10 +591,10 @@ function App() {
               <p className="price-period">Monthly</p>
               <hr className="price-divider" />
               <div className="price-perks">
-                <div>\u2713 No Deposit</div>
-                <div>\u2713 No Admin Fees</div>
-                <div>\u2713 No Setup Fees</div>
-                <div>\u2713 Free Registration</div>
+                <div>✓ No Deposit</div>
+                <div>✓ No Admin Fees</div>
+                <div>✓ No Setup Fees</div>
+                <div>✓ Free Registration</div>
               </div>
               <a href={`${MAIN_SITE}/pricing`} className="price-card-link">
                 Other Discounts &gt;
@@ -615,12 +615,12 @@ function App() {
               <h3>Dedicated Desk in ADGM</h3>
               <p className="price-card-label">Your own permanent workspace</p>
               <p className="price-desc">
-                A dedicated desk in ADGM \u2014 one of Abu Dhabi's most established business
+                A dedicated desk in ADGM — one of Abu Dhabi's most established business
                 districts. If you work in ADGM regularly and want a workspace that is always
                 yours, a Dedicated Desk gives you the convenience and consistency of a private
                 workspace at a much lower cost.{' '}
                 <strong>
-                  Only AED 150 more than a Flexi Desk \u2014 making it an excellent option for
+                  Only AED 150 more than a Flexi Desk — making it an excellent option for
                   regular users.
                 </strong>
               </p>
@@ -634,10 +634,10 @@ function App() {
               <p className="price-period">Monthly</p>
               <hr className="price-divider" />
               <div className="price-perks">
-                <div>\u2713 No Deposit</div>
-                <div>\u2713 No Admin Fees</div>
-                <div>\u2713 No Setup Fees</div>
-                <div>\u2713 Free Registration</div>
+                <div>✓ No Deposit</div>
+                <div>✓ No Admin Fees</div>
+                <div>✓ No Setup Fees</div>
+                <div>✓ Free Registration</div>
               </div>
               <a href={`${MAIN_SITE}/contact`} className="price-card-link">
                 Request Quote &gt;
@@ -650,7 +650,7 @@ function App() {
           {otherServices.map((s) => (
             <a href={s.href} className="other-service-card" key={s.id}>
               {s.img && <img src={s.img} alt={s.title} loading="lazy" decoding="async" />}
-              {!s.img && <div className="other-service-placeholder">\ud83c\udfa4</div>}
+              {!s.img && <div className="other-service-placeholder">🎤</div>}
               <div className="other-service-body">
                 <h3>{s.title}</h3>
                 <p>{s.blurb}</p>
@@ -695,7 +695,7 @@ function App() {
         <span className="eyebrow">PRICING</span>
         <h2>What Does an ADGM Workspace Actually Cost?</h2>
         <p className="pricing-intro">
-          Straightforward pricing for coworking space in ADGM \u2014 no hidden fees beyond the
+          Straightforward pricing for coworking space in ADGM — no hidden fees beyond the
           one-time due diligence fee where a registered address is included.
         </p>
         <div className="price-table-wrap">
@@ -740,19 +740,19 @@ function App() {
             <tbody>
               <tr>
                 <td>Short-term workspace</td>
-                <td>\u2713</td><td></td><td></td><td></td><td></td>
+                <td>✓</td><td></td><td></td><td></td><td></td>
               </tr>
               <tr>
                 <td>Flexible seating</td>
-                <td>\u2713</td><td>\u2713</td><td></td><td></td><td></td>
+                <td>✓</td><td>✓</td><td></td><td></td><td></td>
               </tr>
               <tr>
                 <td>Fixed desk</td>
-                <td></td><td></td><td>\u2713</td><td></td><td></td>
+                <td></td><td></td><td>✓</td><td></td><td></td>
               </tr>
               <tr>
                 <td>Private office</td>
-                <td></td><td></td><td></td><td>\u2713</td><td></td>
+                <td></td><td></td><td></td><td>✓</td><td></td>
               </tr>
               <tr>
                 <td>Business address</td>
@@ -760,7 +760,7 @@ function App() {
               </tr>
               <tr>
                 <td>Team workspace</td>
-                <td></td><td></td><td></td><td>\u2713</td><td></td>
+                <td></td><td></td><td></td><td>✓</td><td></td>
               </tr>
               <tr>
                 <td>Meeting facilities</td>
@@ -805,10 +805,10 @@ function App() {
             <div className="local-seo-blurbs">
               <div><strong>Coworking Space at Addax Tower</strong><span>Directly inside Addax Tower, ADGM's own business district.</span></div>
               <div><strong>Coworking Space on Al Reem Island</strong><span>Minutes from the wider Al Reem Island business and residential community.</span></div>
-              <div><strong>Coworking Near ADGM</strong><span>Inside ADGM itself \u2014 not just nearby.</span></div>
+              <div><strong>Coworking Near ADGM</strong><span>Inside ADGM itself — not just nearby.</span></div>
             </div>
             <div className="address-card">
-              <div className="address-icon">\ud83d\udccd</div>
+              <div className="address-icon">📍</div>
               <div>
                 <strong>Addax Tower</strong>
                 <span>Al Reem Island, Abu Dhabi, United Arab Emirates</span>
@@ -816,17 +816,17 @@ function App() {
             </div>
             <div className="location-stats">
               <div className="location-stat">
-                <div className="stat-icon">\u2708\ufe0f</div>
+                <div className="stat-icon">✈️</div>
                 <strong>15 minutes</strong>
                 <span>To Abu Dhabi Airport</span>
               </div>
               <div className="location-stat">
-                <div className="stat-icon">\ud83c\udfd6\ufe0f</div>
+                <div className="stat-icon">🏖️</div>
                 <strong>5 minutes</strong>
                 <span>To the Waterfront</span>
               </div>
               <div className="location-stat">
-                <div className="stat-icon">\ud83d\udd11</div>
+                <div className="stat-icon">🔑</div>
                 <strong>24/7</strong>
                 <span>Member Access</span>
               </div>
@@ -886,8 +886,8 @@ function App() {
         <div className="problems-grid">
           {problems.map((p) => (
             <a href={p.href} className="problem-card" key={p.q}>
-              <p className="problem-q">\u201c{p.q}\u201d</p>
-              <span className="decision-answer">\u2192 {p.a}</span>
+              <p className="problem-q">“{p.q}”</p>
+              <span className="decision-answer">→ {p.a}</span>
             </a>
           ))}
         </div>
@@ -917,7 +917,7 @@ function App() {
             <div className={`faq-item ${openFaq === index ? 'faq-item-open' : ''}`} key={item.q}>
               <button className="faq-question" onClick={() => toggleFaq(index)}>
                 {item.q}
-                <span className="faq-toggle">{openFaq === index ? '\u2212' : '+'}</span>
+                <span className="faq-toggle">{openFaq === index ? '−' : '+'}</span>
               </button>
               {openFaq === index && <p className="faq-answer">{item.a}</p>}
             </div>
@@ -948,7 +948,7 @@ function App() {
             <div className="logo footer-logo">
               AEGIS <span className="logo-accent">COWORKING</span>
             </div>
-            <p>Business center in ADGM \u00b7 Addax Tower, Al Reem Island, Abu Dhabi.</p>
+            <p>Business center in ADGM · Addax Tower, Al Reem Island, Abu Dhabi.</p>
             <div className="footer-socials">
               <a href="https://www.instagram.com/aegis.coworking/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1014,9 +1014,9 @@ function App() {
         </div>
 
         <div className="footer-bottom">
-          <p>\u00a9 2026 Aegis Coworking. All rights reserved.</p>
+          <p>© 2026 Aegis Coworking. All rights reserved.</p>
           <p>
-            <a href="https://aegiscoworking.ae/terms">Terms &amp; Conditions</a> \u00b7{' '}
+            <a href="https://aegiscoworking.ae/terms">Terms &amp; Conditions</a> ·{' '}
             <a href="https://aegiscoworking.ae/privacy">Privacy Policy</a>
           </p>
         </div>
