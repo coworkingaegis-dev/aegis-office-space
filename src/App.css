@@ -1455,11 +1455,10 @@ section > * {
     height: 50px;
   }
 
-  .whatsapp-float svg {
+   .whatsapp-float svg {
     width: 27px;
     height: 27px;
   }
-}
 }
 
 @media (max-width: 800px) {
