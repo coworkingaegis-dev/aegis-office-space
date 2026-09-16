@@ -70,7 +70,7 @@ const services = [
     title: 'Day Pass ADGM',
     price: 'AED 100 per day',
     tag: 'Workspace for one day',
-    text: 'A Cheap Coworking Day Pass in ADGM, Abu Dhabi starts from AED 100/day for professionals who need a workspace for a day without a monthly commitment. A convenient and affordable option for freelancers, remote workers and business travelers visiting Addax Tower.',
+    text: 'A Cheap Coworking Day Pass in ADGM, Abu Dhabi starts from AED 100 per day for professionals who need a workspace for a day without a monthly commitment. A convenient and affordable option for freelancers, remote workers and business travelers visiting Addax Tower.',
     href: `${MAIN_SITE}/day-pass`,
     bullets: ['One-day access', 'No monthly membership required', 'Ready-to-use workspace', 'Ideal for visitors and occasional users'],
   },
