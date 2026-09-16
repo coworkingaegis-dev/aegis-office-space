@@ -20,7 +20,7 @@ const services = [
     title: 'Hot Desk ADGM',
     price: 'AED 1,000 per month',
     tag: 'Flexible seating',
-    text: 'A Flexi Desk / Hot Desk gives you an affordable and flexible way to work from a professional coworking space in ADGM without being tied to the same workstation every day. Located at Aegis Coworking in Addax Tower, Al Reem Island, Abu Dhabi, the Flexi Desk is ideal for freelancers, remote workers, consultants, entrepreneurs, professionals and businesses that need a reliable workspace in Abu Dhabi.
+    text: `A Flexi Desk / Hot Desk gives you an affordable and flexible way to work from a professional coworking space in ADGM without being tied to the same workstation every day. Located at Aegis Coworking in Addax Tower, Al Reem Island, Abu Dhabi, the Flexi Desk is ideal for freelancers, remote workers, consultants, entrepreneurs, professionals and businesses that need a reliable workspace in Abu Dhabi.
 
 Starting from AED 1,000 per month, you can access a fully furnished coworking environment with 24/7 member access, high-speed Wi-Fi, meeting room access, professional furniture, coffee, printing facilities and a business-focused workspace. Instead of paying for a traditional private office, you can use an available workstation within the coworking area and enjoy the flexibility of a modern shared office.
 
@@ -28,8 +28,7 @@ The Flexi Desk is suitable for anyone searching for a flexi desk in ADGM, flexi 
 
 Aegis Coworking is located in Addax Tower within the ADGM area, making it a convenient option for professionals and businesses looking for workspace in ADGM and Al Reem Island. You also get access to the wider coworking environment, meeting facilities and shared amenities while avoiding the cost and commitment associated with a traditional office.
 
-With no deposit, no admin fees and no setup fees, the Flexi Desk provides a straightforward and cost-effective coworking option for individuals and businesses looking for flexible office space in Abu Dhabi.'
-,
+With no deposit, no admin fees and no setup fees, the Flexi Desk provides a straightforward and cost-effective coworking option for individuals and businesses looking for flexible office space in Abu Dhabi.`,
     href: `${MAIN_SITE}/office-space`,
     bullets: ['Shared workspace', 'Flexible seating', 'Professional environment', '24/7 member access'],
   },
@@ -39,7 +38,7 @@ With no deposit, no admin fees and no setup fees, the Flexi Desk provides a stra
     title: 'Dedicated Desk ADGM',
     price: 'AED 1,150 per month',
     tag: 'Your fixed workspace',
-    text: 'A Dedicated Desk in ADGM gives you your own permanent workspace within Aegis Coworking at Addax Tower, Al Reem Island, Abu Dhabi. It is designed for professionals, freelancers, consultants, SMEs and businesses that want a consistent workspace without the cost of renting a traditional private office. Your dedicated workstation remains assigned to you, giving you the convenience of returning to the same desk and keeping your workspace organised.
+    text: `A Dedicated Desk in ADGM gives you your own permanent workspace within Aegis Coworking at Addax Tower, Al Reem Island, Abu Dhabi. It is designed for professionals, freelancers, consultants, SMEs and businesses that want a consistent workspace without the cost of renting a traditional private office. Your dedicated workstation remains assigned to you, giving you the convenience of returning to the same desk and keeping your workspace organised.
 
 Located inside ADGM, our dedicated desk provides a professional environment for businesses that need a reliable physical workspace in Abu Dhabi Global Market. Members benefit from 24/7 access, high-speed Wi-Fi, meeting room access, professional office furniture, coffee, printing and a business-focused coworking environment.
 
@@ -47,8 +46,7 @@ Starting from AED 1,150 per month, the Dedicated Desk is an affordable option fo
 
 Whether you are looking for an affordable office space in ADGM, a dedicated workstation near ADGM, a business centre in ADGM, or a professional workspace at Addax Tower, Aegis Coworking provides a furnished and flexible alternative to a conventional office. You can work from the same dedicated desk every day while still having access to shared coworking facilities and meeting spaces.
 
-With transparent pricing, no deposit, no admin fees and no setup fees, the Dedicated Desk offers a practical way to establish your workspace in one of Abu Dhabi's key business districts.
-',
+With transparent pricing, no deposit, no admin fees and no setup fees, the Dedicated Desk offers a practical way to establish your workspace in one of Abu Dhabi's key business districts.`,
     href: `${MAIN_SITE}/office-space`,
     bullets: ['Permanent workstation', 'Registered ADGM business address', '24/7 access', 'Lockable storage'],
   },
