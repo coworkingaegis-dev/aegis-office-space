@@ -96,11 +96,11 @@ const requirements = [
 ]
 
 const pricing = [
-  ['Day Pass', 'AED 100', '/day'],
-  ['Flexi Desk / Hot Desk', 'AED 1,000', '/month'],
-  ['Dedicated Desk', 'AED 1,150', '/month'],
-  ['Virtual Office', 'AED 292', '/month'],
-  ['Private Office', 'AED 4,500', '/month'],
+  ['Day Pass', 'AED 100', 'per day'],
+  ['Flexi Desk / Hot Desk', 'AED 1,000', 'per month'],
+  ['Dedicated Desk', 'AED 1,150', 'per month'],
+  ['Virtual Office', 'AED 292', 'per month'],
+  ['Private Office', 'AED 4,500', 'per month'],
   ['Meeting Room', 'Contact', ''],
 ]
 
