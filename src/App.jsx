@@ -490,34 +490,7 @@ function App() {
           </div>
         </section>
 
-        <section id="pricing" className="section pricing-section">
-          <div className="section-heading">
-            <p className="eyebrow">CURRENT LISTED PRICES</p>
-            <h2>What Does an ADGM Workspace Actually Cost?</h2>
-            <p>
-              Use the table below as a quick price reference. Meeting facilities are quoted separately.
-            </p>
-          </div>
-
-          <div className="pricing-table-wrap">
-            <table className="pricing-table">
-              <thead>
-                <tr><th>Workspace</th><th>Starting price</th></tr>
-              </thead>
-              <tbody>
-                {pricing.map(([name, price, period]) => (
-                  <tr key={name}>
-                    <td>{name}</td>
-                    <td><strong>{price}</strong> {period && <span>{period}</span>}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-        
-        </section>
-
+       
         <section className="section comparison-section">
           <div className="section-heading">
             <p className="eyebrow">COMPARE</p>
