@@ -451,7 +451,7 @@ function App() {
           <div className="info-list">
             {requirements.map((item) => (
               <article className="info-item" key={item.title}>
-                <span>01</span>
+             
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
