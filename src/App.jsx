@@ -624,11 +624,7 @@ function App() {
               Abu Dhabi. The location gives businesses a professional workspace in the
               ADGM area with access to coworking, desks, offices and meeting facilities.
             </p>
-            <div className="address-box">
-              <strong>Aegis Coworking</strong>
-              <span>Office 3812, Addax Tower</span>
-              <span>Al Reem Island, Abu Dhabi, UAE</span>
-            </div>
+           
 
           </div>
           <div className="map-frame">
