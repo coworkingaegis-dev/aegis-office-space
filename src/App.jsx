@@ -663,16 +663,21 @@ function App() {
       
 
 <footer className="site-footer">
+
   <div className="footer-grid">
 
     {/* BRAND */}
     <div className="footer-brand">
-      <a className="brand footer-brand-link" href={MAIN_SITE}>
+
+      <a
+        className="footer-brand-link"
+        href={MAIN_SITE}
+      >
         <img
           src={aegisLogo}
           alt="Aegis Coworking"
-          width="52"
-          height="52"
+          width="58"
+          height="58"
         />
 
         <span>
@@ -707,9 +712,24 @@ function App() {
           aria-label="Aegis Coworking on Instagram"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="1" className="instagram-dot" />
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            />
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1"
+              className="instagram-dot"
+            />
           </svg>
         </a>
 
@@ -729,63 +749,120 @@ function App() {
     </div>
 
 
-    {/* WORKSPACE */}
+    {/* QUICK LINKS */}
     <div className="footer-column">
-      <h3>WORKSPACE</h3>
 
-      <a href={`${MAIN_SITE}/office-space`}>
-        Hot Desk ADGM
+      <h3>QUICK LINKS</h3>
+
+      <a href={MAIN_SITE}>
+        Home
       </a>
 
+      <a href={`${MAIN_SITE}/pricing`}>
+        Hot Deals
+      </a>
+
+      <a href={`${MAIN_SITE}/blogs`}>
+        Blog
+      </a>
+
+      <a href={`${MAIN_SITE}/contact`}>
+        Contact Us
+      </a>
+
+    </div>
+
+
+    {/* OUR SPACES */}
+    <div className="footer-column">
+
+      <h3>OUR SPACES</h3>
+
       <a href={`${MAIN_SITE}/office-space`}>
-        Dedicated Desk ADGM
+        Office Spaces
       </a>
 
       <a href={`${MAIN_SITE}/private-office`}>
-        Private Office ADGM
+        Private Office
       </a>
 
       <a href={`${MAIN_SITE}/virtual-office`}>
-        Virtual Office ADGM
+        Virtual Office
       </a>
 
       <a href={`${MAIN_SITE}/meeting-room`}>
-        Meeting Room ADGM
+        Meeting Room
       </a>
 
       <a href={`${MAIN_SITE}/day-pass`}>
-        Day Pass ADGM
+        Day Pass
       </a>
+
+      <a href={`${MAIN_SITE}/about`}>
+        About Us
+      </a>
+
     </div>
 
 
     {/* CONTACT */}
     <div className="footer-column footer-contact">
-      <h3>CONTACT</h3>
 
-      <a href="tel:+971503926316">
-        +971 50 392 6316
-      </a>
-
-      <a href="mailto:contact@aegiscoworking.ae">
-        contact@aegiscoworking.ae
-      </a>
+      <h3>CONTACT US</h3>
 
       <p>
-        Office 3812, Addax Tower,<br />
-        Al Reem Island, Abu Dhabi
+        <strong>Phone:</strong>{' '}
+        <a href="tel:+971503926316">
+          +971 50 392 6316
+        </a>
       </p>
+
+      <p>
+        <strong>Email:</strong>{' '}
+        <a href="mailto:contact@aegiscoworking.ae">
+          contact@aegiscoworking.ae
+        </a>
+      </p>
+
+      <p>
+        <strong>Address:</strong>{' '}
+        3812 Addax Tower, Al Reem Island, Abu Dhabi
+      </p>
+
+    </div>
+
+
+    {/* OPENING HOURS */}
+    <div className="footer-column footer-hours">
+
+      <h3>OPENING HOURS</h3>
+
+      <p>
+        24/7 Access for Members
+      </p>
+
+      <p>
+        Tours: Mon–Fri
+      </p>
+
+      <p>
+        Timings: 9:00 AM – 6:00 PM
+      </p>
+
     </div>
 
   </div>
 
 
+  {/* FOOTER BOTTOM */}
   <div className="footer-bottom">
+
     <span>
       © 2026 Aegis Coworking. All rights reserved.
     </span>
 
     <span className="footer-legal">
+
       <a href={`${MAIN_SITE}/terms`}>
         Terms &amp; Conditions
       </a>
@@ -795,8 +872,11 @@ function App() {
       <a href={`${MAIN_SITE}/privacy`}>
         Privacy Policy
       </a>
+
     </span>
+
   </div>
+
 </footer>
     </>
   )
