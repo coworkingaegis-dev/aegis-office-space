@@ -1117,39 +1117,17 @@ section > * {
   margin-bottom: 0;
 }
 
-/* =========================================================
-   WHATSAPP
-   ========================================================= */
-
-.whatsapp-float {
-  position: fixed;
-  right: 24px;
-  bottom: 22px;
-  z-index: 1200;
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #20c96b;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 10px 28px rgba(0,0,0,.16);
-}
-
-.whatsapp-float span {
-  font-size: 13px;
-  font-weight: 800;
-}
 
 /* =========================================================
-   FOOTER
+   FOOTER — AEGIS LIGHT STYLE
 ========================================================= */
 
 .site-footer {
-  background: #111a16;
-  color: #fff;
+  width: 100%;
   padding: 68px 24px 24px;
+  background: #f7f8f5;
+  color: var(--text);
+  border-top: 1px solid var(--line);
 }
 
 .footer-grid {
@@ -1158,12 +1136,20 @@ section > * {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.45fr 1fr 1fr;
-  gap: 70px;
+  grid-template-columns:
+    1.45fr
+    1fr
+    1fr
+    1.25fr
+    1fr;
+
+  gap: 48px;
 }
 
 
-/* BRAND */
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
 
 .footer-brand {
   min-width: 0;
@@ -1173,14 +1159,18 @@ section > * {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
-  color: #fff;
+
+  margin-bottom: 18px;
+
+  color: var(--text);
+  text-decoration: none;
 }
 
 .footer-brand-link img {
-  width: 52px;
-  height: 52px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
+  display: block;
 }
 
 .footer-brand-link span {
@@ -1189,36 +1179,43 @@ section > * {
 }
 
 .footer-brand-link strong {
-  color: #fff;
+  color: var(--text);
   font-size: 16px;
   font-weight: 800;
+  line-height: 1;
   letter-spacing: .05em;
 }
 
 .footer-brand-link small {
-  margin-top: 4px;
-  color: #aab5af;
+  margin-top: 5px;
+
+  color: #66716b;
   font-size: 8px;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: .2em;
 }
 
 .footer-description {
-  max-width: 330px;
+  max-width: 310px;
   margin: 0;
-  color: #9ba8a1;
+
+  color: #66716b;
   font-size: 13px;
   line-height: 1.7;
 }
 
 
-/* SOCIAL ICONS */
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
 
 .social-links {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 23px;
+  gap: 9px;
+
+  margin-top: 22px;
 }
 
 .social-links a {
@@ -1229,10 +1226,12 @@ section > * {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, .16);
+  border: 1px solid #dce3df;
   border-radius: 50%;
 
-  color: #c1cbc5;
+  background: transparent;
+  color: #53615a;
+
   text-decoration: none;
 
   transition:
@@ -1243,16 +1242,19 @@ section > * {
 }
 
 .social-links a:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, .08);
-  border-color: rgba(255, 255, 255, .3);
+  background: var(--green-soft);
+  border-color: #cbdcd4;
+  color: var(--green);
+
   transform: translateY(-2px);
 }
 
 .social-links svg {
   width: 17px;
   height: 17px;
+
   fill: currentColor;
+  stroke: none;
 }
 
 .social-links svg rect {
@@ -1273,10 +1275,13 @@ section > * {
 }
 
 
-/* FOOTER COLUMNS */
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
 
 .footer-column {
   min-width: 0;
+
   display: flex;
   flex-direction: column;
 }
@@ -1284,61 +1289,88 @@ section > * {
 .footer-column h3 {
   margin: 3px 0 20px;
 
-  color: #fff;
+  color: var(--text);
   font-size: 10px;
   font-weight: 800;
+  line-height: 1.2;
   letter-spacing: .16em;
 }
 
-.footer-column a {
+.footer-column > a {
   width: fit-content;
+
   margin-bottom: 12px;
 
-  color: #aeb9b2;
+  color: #53615a;
   font-size: 13px;
   line-height: 1.5;
+
   text-decoration: none;
 
-  transition: color .2s ease, transform .2s ease;
+  transition:
+    color .2s ease,
+    transform .2s ease;
 }
 
-.footer-column a:hover {
-  color: #fff;
+.footer-column > a:hover {
+  color: var(--green);
   transform: translateX(2px);
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
-.footer-contact p {
-  margin: 2px 0 0;
-  color: #aeb9b2;
+.footer-contact p,
+.footer-hours p {
+  margin: 0 0 12px;
+
+  color: #66716b;
   font-size: 13px;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
-.footer-contact a:first-of-type {
-  color: #d7b76f;
+.footer-contact strong {
+  color: #34413a;
+  font-weight: 700;
+}
+
+.footer-contact p a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.footer-contact p a:hover {
+  text-decoration: underline;
 }
 
 
-/* BOTTOM */
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
 
 .footer-bottom {
   width: 100%;
   max-width: var(--max);
+
   margin: 52px auto 0;
   padding-top: 21px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, .11);
+  border-top: 1px solid var(--line);
 
-  color: #7f8c85;
+  color: #7a8580;
   font-size: 11px;
+}
+
+.footer-bottom > span {
+  display: block;
 }
 
 .footer-legal {
@@ -1348,14 +1380,16 @@ section > * {
 }
 
 .footer-bottom a {
-  color: #9ba7a0;
+  color: #66716b;
   text-decoration: none;
+
   transition: color .2s ease;
 }
 
 .footer-bottom a:hover {
-  color: #fff;
+  color: var(--green);
 }
+
 
 
 /* =========================================================
