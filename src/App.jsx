@@ -371,7 +371,7 @@ function App() {
               </div>
 
               <div className="hero-proof" aria-label="Workspace starting prices">
-                <div><strong>AED 100</strong><span>Day Pass</span></div>
+               
                 <div><strong>AED 1,000</strong><span>Flexi Desk</span></div>
                 <div><strong>AED 1,150</strong><span>Dedicated Desk</span></div>
                 <div><strong>AED 4,500</strong><span>Private Office</span></div>
