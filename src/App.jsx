@@ -9,7 +9,7 @@ import meetingRoomImg from './assets/Meeting room adgm abu dhabi.webp'
 import dayPassImg from './assets/aegis-coworking-day-pass-adgm.webp'
 import './App.css'
 
-const SITE_URL = 'https://www.coworkingadgm.online'
+const SITE_URL = 'https://officespaceinadgm.aegiscoworking.ae'
 const MAIN_SITE = 'https://www.aegiscoworking.ae'
 const WHATSAPP = 'https://wa.me/971503926316'
 
@@ -352,24 +352,34 @@ function App() {
 
       <main>
         <section className="hero">
-          <div className="hero-content">
-            <p className="eyebrow">ADGM · ADDAX TOWER · AL REEM ISLAND</p>
-            <h1>Your ADGM Workspace Starts Here</h1>
-            <p className="hero-lead">
-              Find a coworking space in ADGM, Abu Dhabi that fits the way you work —
-              from a Hot Desk or Flexi Desk to a Dedicated Desk, Private Office,
-              Virtual Office, meeting room or Day Pass.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#services">Explore ADGM Workspace</a>
-              <a className="button button-light" href={`${MAIN_SITE}/contact`}>Book a Tour</a>
+          <div className="hero-inner">
+            <div className="hero-content">
+              <p className="eyebrow">ADGM · ADDAX TOWER · AL REEM ISLAND</p>
+              <h1>Your ADGM Workspace Starts Here</h1>
+              <p className="hero-lead">
+                Find a coworking space in ADGM, Abu Dhabi that fits the way you work —
+                from a Hot Desk or Flexi Desk to a Dedicated Desk, Private Office,
+                Virtual Office, meeting room or Day Pass.
+              </p>
+              <div className="hero-actions">
+                <a className="button button-primary" href="#services">Explore ADGM Workspace</a>
+                <a className="button button-light" href={`${MAIN_SITE}/contact`}>Book a Tour</a>
+              </div>
+
+              <div className="hero-proof" aria-label="Workspace starting prices">
+                <div><strong>AED 100</strong><span>Day Pass</span></div>
+                <div><strong>AED 1,000</strong><span>Flexi Desk</span></div>
+                <div><strong>AED 1,150</strong><span>Dedicated Desk</span></div>
+                <div><strong>AED 4,500</strong><span>Private Office</span></div>
+              </div>
             </div>
 
-            <div className="hero-proof" aria-label="Workspace starting prices">
-              <div><strong>AED 100</strong><span>Day Pass</span></div>
-              <div><strong>AED 1,000</strong><span>Flexi Desk</span></div>
-              <div><strong>AED 1,150</strong><span>Dedicated Desk</span></div>
-              <div><strong>AED 4,500</strong><span>Private Office</span></div>
+            <div className="hero-visual">
+              <img src={flexiDeskImg} alt="Coworking workspace at Aegis Coworking in Addax Tower, ADGM" />
+              <div className="hero-location-card">
+                <strong>Addax Tower</strong>
+                <span>Al Reem Island · ADGM</span>
+              </div>
             </div>
           </div>
         </section>
