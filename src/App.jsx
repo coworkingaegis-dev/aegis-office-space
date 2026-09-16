@@ -390,13 +390,13 @@ function App() {
         </section>
 
         <section className="answer-section section-narrow">
-          <p className="eyebrow">QUICK ANSWER</p>
+          
           <h2>Looking for Coworking Space in ADGM? Start Here.</h2>
           <p>
             Aegis Coworking provides flexible workspace at Addax Tower, Al Reem Island,
             Abu Dhabi. Options include Hot Desk/Flexi Desk, Dedicated Desk, Private Office,
             Virtual Office, meeting rooms and Day Pass access.
-            Current listed workspace prices start at AED 100/day.
+            Current listed workspace prices start at AED 100 per day.
           </p>
         </section>
 
