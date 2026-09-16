@@ -375,6 +375,7 @@ function App() {
                 <div><strong>AED 1,000</strong><span>Flexi Desk</span></div>
                 <div><strong>AED 1,150</strong><span>Dedicated Desk</span></div>
                 <div><strong>AED 4,500</strong><span>Private Office</span></div>
+                 <div><strong>AED 292</strong><span>Virtual Office</span></div>
               </div>
             </div>
 
