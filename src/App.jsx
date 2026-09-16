@@ -50,7 +50,7 @@ const services = [
     title: 'Virtual Office ADGM',
     price: 'AED 292 per month',
     tag: 'Professional presence',
-    text: 'A virtual-office option for businesses that need a professional presence without renting a physical desk.',
+    text: 'A Virtual Office in ADGM, Abu Dhabi gives your business a professional presence without the cost of renting a full-time office. Aegis Coworking provides an affordable Virtual Office starting from AED 292 per month with an ADGM registered business address at Addax Tower, Al Reem Island. The service includes professional mail handling, a UAE business phone number, meeting room access and support for ADGM company registration and licence renewal. It is ideal for founders, freelancers, consultants, international businesses and companies looking for a Virtual Office in ADGM, Virtual Office in Abu Dhabi, ADGM business address, registered office in ADGM, business centre in ADGM, professional business address in Abu Dhabi, affordable office space in ADGM or a flexible workspace near ADGM.',
     href: `${MAIN_SITE}/virtual-office`,
     bullets: ['Professional business presence', 'No physical desk required', 'Monthly option', 'Useful for remote businesses'],
   },
