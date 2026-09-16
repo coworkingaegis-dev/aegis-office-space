@@ -62,17 +62,7 @@ const services = [
     tag: 'Meet clients professionally',
     text: 'Bookable meeting rooms for client meetings, interviews, discussions and business appointments.',
     href: `${MAIN_SITE}/meeting-room`,
-    bullets: ['Hourly booking', 'Presentation screens', 'WiFi', 'Members can use meeting credits'],
-  },
-  {
-    id: 'presentation-room',
-    image: null,
-    title: 'Presentation Room ADGM',
-    price: 'Contact for rates',
-    tag: 'Present & collaborate',
-    text: 'A larger presentation space for events, workshops and business presentations, with professional AV support.',
-    href: `${MAIN_SITE}/presentation-room`,
-    bullets: ['Up to 50 attendees', '4K display', 'Professional audio', 'Recording/live-streaming support'],
+    bullets: ['Hourly booking', 'Meeting screens', 'WiFi', 'Members can use meeting credits'],
   },
   {
     id: 'day-pass',
@@ -112,7 +102,6 @@ const pricing = [
   ['Virtual Office', 'AED 292', '/month'],
   ['Private Office', 'AED 4,500', '/month'],
   ['Meeting Room', 'Contact', ''],
-  ['Presentation Room', 'Contact', ''],
 ]
 
 const audiences = [
@@ -131,7 +120,6 @@ const problems = [
   ['I need privacy for my team.', 'Private Office ADGM', `${MAIN_SITE}/private-office`],
   ['I need a professional business presence.', 'Virtual Office ADGM', `${MAIN_SITE}/virtual-office`],
   ['I need somewhere to meet clients.', 'Meeting Room ADGM', `${MAIN_SITE}/meeting-room`],
-  ['I need a larger presentation space.', 'Presentation Room ADGM', `${MAIN_SITE}/presentation-room`],
 ]
 
 const blogGuides = [
@@ -166,7 +154,6 @@ const faqs = [
   ['How much is a Private Office in ADGM?', 'Aegis currently lists Private Office space from AED 4,500/month. Private offices are intended for businesses and teams that need a private, lockable room.'],
   ['How much is a Virtual Office in ADGM?', 'Aegis currently lists its Virtual Office option from AED 292/month.'],
   ['Does Aegis offer meeting rooms?', 'Yes. Meeting rooms can be booked by the hour, with meeting-room credits available for members.'],
-  ['Does Aegis offer a presentation room?', 'Yes. The presentation room supports up to 50 attendees and includes a 4K display, professional audio and recording/live-streaming support.'],
   ['Does Aegis offer a Day Pass?', 'Yes. The current listed Day Pass price is AED 100/day.'],
   ['Where is Aegis Coworking located?', 'Aegis Coworking is at Office 3812, Addax Tower, Al Reem Island, Abu Dhabi, UAE.'],
   ['Is Aegis Coworking at Addax Tower?', 'Yes. Aegis Coworking is located in Addax Tower on Al Reem Island.'],
@@ -390,7 +377,7 @@ function App() {
           <p>
             Aegis Coworking provides flexible workspace at Addax Tower, Al Reem Island,
             Abu Dhabi. Options include Hot Desk/Flexi Desk, Dedicated Desk, Private Office,
-            Virtual Office, meeting rooms, a presentation room and Day Pass access.
+            Virtual Office, meeting rooms and Day Pass access.
             Current listed workspace prices start at AED 100/day.
           </p>
         </section>
@@ -402,7 +389,7 @@ function App() {
             <p>
               Choose a workspace around how often you work, how much privacy you need,
               whether you need a fixed desk, and whether your business needs meeting or
-              presentation facilities.
+              meeting facilities.
             </p>
           </div>
 
@@ -480,7 +467,7 @@ function App() {
             <article>
               <span className="number">03</span>
               <h3>Meeting Facilities</h3>
-              <p>Use meeting and presentation spaces when your business needs a more formal setting.</p>
+              <p>Use meeting rooms when your business needs a more formal setting.</p>
             </article>
           </div>
         </section>
@@ -490,8 +477,7 @@ function App() {
             <p className="eyebrow">CURRENT LISTED PRICES</p>
             <h2>What Does an ADGM Workspace Actually Cost?</h2>
             <p>
-              Use the table below as a quick price reference. Meeting and presentation
-              facilities are quoted separately.
+              Use the table below as a quick price reference. Meeting facilities are quoted separately.
             </p>
           </div>
 
@@ -615,7 +601,6 @@ function App() {
           <div className="facility-grid">
             <article><h3>Work-Ready Spaces</h3><p>Furnished coworking areas with practical work facilities.</p></article>
             <article><h3>Meeting Facilities</h3><p>Meeting rooms for client conversations and business appointments.</p></article>
-            <article><h3>Presentation Facilities</h3><p>Presentation space with 4K display, professional audio and AV support.</p></article>
             <article><h3>Professional Environment</h3><p>A business-focused environment in Addax Tower, Al Reem Island.</p></article>
             <article><h3>Flexible Access</h3><p>Desk members have 24/7 access according to their applicable plan.</p></article>
             <article><h3>Business Support</h3><p>Choose a workspace and contact Aegis for help understanding the available options.</p></article>
@@ -698,7 +683,6 @@ function App() {
             <a href={`${MAIN_SITE}/private-office`}>Private Office ADGM</a>
             <a href={`${MAIN_SITE}/virtual-office`}>Virtual Office ADGM</a>
             <a href={`${MAIN_SITE}/meeting-room`}>Meeting Room ADGM</a>
-            <a href={`${MAIN_SITE}/presentation-room`}>Presentation Room</a>
             <a href={`${MAIN_SITE}/day-pass`}>Day Pass ADGM</a>
           </div>
 
