@@ -126,22 +126,27 @@ const blogGuides = [
   {
     title: 'Affordable Coworking on Al Reem Island',
     text: 'A practical guide to finding flexible workspace around Al Reem Island and ADGM, including what to consider when comparing desk and office options.',
+    href: `${MAIN_SITE}/blog/affordable-coworking-al-reem-island-adgm`,
   },
   {
     title: 'ADGM Coworking, Visa Quota & Employees Per Desk',
     text: 'Aegis explains the relationship between workspace arrangements and employee capacity questions, helping businesses understand what they should verify before choosing a plan.',
+    href: `${MAIN_SITE}/blog/adgm-coworking-visa-quota-employees-per-desk`,
   },
   {
     title: 'Addax Tower ADGM Business Workspace Location',
     text: 'A location-focused guide explaining why Addax Tower matters when looking for workspace in ADGM and Al Reem Island.',
+    href: `${MAIN_SITE}/blog/addax-tower-adgm-business-workspace-location`,
   },
   {
     title: 'ADGM vs DIFC: Where Does Workspace Cost Fit Into the Decision?',
     text: 'A comparison guide for businesses considering the two financial-centre locations, with workspace cost as one part of the wider decision.',
+    href: `${MAIN_SITE}/blog/adgm-vs-difc-workspace-cost`,
   },
   {
     title: 'Do You Need One Dedicated Desk Per Employee in ADGM?',
     text: 'A guide focused on the difference between physical seating and business capacity, and the questions businesses should check for their specific setup.',
+    href: `${MAIN_SITE}/blog/adgm-dedicated-desk-visa-capacity-vs-seating`,
   },
 ]
 
@@ -589,7 +594,12 @@ function App() {
                 <p className="guide-label">AEGIS GUIDE</p>
                 <h3>{guide.title}</h3>
                 <p>{guide.text}</p>
-                <a className="text-link" href={`${MAIN_SITE}/blogs`}>Read the full Aegis guide →</a>
+               <a
+  className="text-link"
+  href={guide.href}
+>
+  Read the full Aegis guide →
+</a>
               </article>
             ))}
           </div>
